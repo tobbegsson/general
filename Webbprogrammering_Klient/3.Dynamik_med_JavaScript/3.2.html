@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<script src="js_3.2.js"></script>		
+		<title>
+			Uppgift 3.2 - JavaScript-objekt
+		</title>
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 3.2 - JavaScript-objekt</h1>
+		</header>
+		<h3>Array</h3>
+			<p>Här kan du lägga till variabler i en lista. Lägg till hur många du vill. Sedan kan du kontrollera vilka variabler du har lagt till</p>
+			<input type="text" id="arrEx" value="Blå" />
+			<button onclick="arrAdd()">Lägg till</button>
+			<button onclick="arrShow()">Visa listan</button>
+			<p id="arrayDemo"></p>
+		<h3>Boolean</h3>
+			<p>Skriv in ett tal och klicka på knappen för att se om talet är större eller mindre än 10. Om talet är större visas "true", om mindre visas "false"</p>
+			<input type="text" id="boolEx" value="0" />
+			<button onclick="boolTry()">Prova</button>
+			<p id="boolDemo"></p>
+		<h3>Date</h3>
+			<p>Klicka på knappen nedan för att visa dagens datum</p>
+			<button onclick="dateShow()">Visa datum</button>
+			<p id="dateDemo"></p>
+		<h3>Math</h3>
+			<p>Klicka på knappen nedan för att slumpa fram ett värde mellan 0 och 10.</p>
+			<button onclick="mathShow()">Slumpa tal</button>
+			<p id="mathDemo"></p>
+		<h3>Number</h3>
+			<p>Skriv in ett heltal och klicka på knappen för att få veta dess värde även som hexadecimalt samt binärt tal</p>
+			<input type="text" id="numbEx" value="0" />
+			<button onclick="numbShow()">Räkna om</button>
+			<p id="numbDemo"></p>
+		<h3>String</h3>
+			<p>Skriv in en text eller ett och klicka på knappen nedan för att få fram antal tecken</p>
+			<input type="text" id="strEx" value="" />
+			<button onclick="strShow()">Räkna tecken</button>
+			<p id="strDemo"></p>
+		<h3>RegExp</h3>
+			<p>Texten nedan är från en av tidernas vackraste låtar. Skriv in en bokstav eller ett ord och klicka på knappen för att få fram hur många gånger det förekommer i texten</p>
+			<p id="textEx">Just idag är jag stark, just idag mår jag bra, Jag förs framåt av kraftiga vindar. Just idag är jag stark, just idag mår jag bra. Jag har tron på mej själv på min sida</p>
+			<input type="text" id="regExpEx" value="" />
+			<button onclick="regExpShow()">Räkna förekomst</button>
+			<p id="regExpDemo"></p>
+		<h3>Global</h3>
+			<p>Exemplifiering av Global finns i exemplet för Boolean. Här används funktionerna <code>isNan(parseInt())</code> för att kontrolla att det inmatade värdet är av datatypen int. Om så inte är fallet kommer en feltext upp istället</p>
+		<footer>
+			<p>
+				Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a>
+			</p>
+		</footer>
+	</body>
+</html>

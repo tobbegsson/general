@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8">
+		<title> Uppgift 1.1 - Grunderna i HTML5 </title>
+	</head>
+	<body>
+		<a name="topp_ankare"></a>
+		<header>
+		<h1>Uppgift 1.1 - Grunderna i HTML5</h1>
+		</header>
+		<h2>Begreppsbeskrivningar</h2>
+		<h5>DOCTYPE</h5>
+		Att ange dokumenttyp hjälper webbläsaren att förstå hur den innehållande koden ska tolkas. I äldre respektive nya versioner av HTML finns skillnader i möjlig funktionalitet direkt i koden. Saknas angiven dokumenttyp måste webbläsaren själv lista ut hur koden ska tolkas vilket kan ge en annorlunda återgiven webbsida beroende på webbläsare.
+		<h5>TECKENKOD</h5>
+		Teckenkodangivning är centralt med anledning av att olika språk innehåller olika tecken och att tecknen då ska kunna tolkas på ett korrekt sätt av läsande maskiner.
+		<h5>SPRÅK</h5>
+		Språkattributet anger vilket språk som innehållet i elementet har.
+		<h5>VALIDERING</h5>
+		Validering av koden görs för att kontrollera att den är korrekt skriven enligt det språk som angivits, i detta fall HTML5
+		<h5>DOKUMENTUPPBYGGNAD</h5>
+		Ett HTML-dokument byggs upp genom nedan primära element:
+		<ol>
+			<li>HTML - Ett HTML-dokument inleds med taggen <code>&lt;html></code> vilket helt enkelt innebär att det som följer är just ett HTML-dokument.</li>
+			<li>HEAD - Första delen inom <code>&lt;html></code>-kroppen är taggen <code>&lt;head></code>. Inom denna del anges till exempel sidans titel, samt metadata.</li>
+			<li>BODY - Den andra och största delen av dokumentet är <code>&lt;body></code>. Allt inom denna del är det som visas på webbsidan eller påverkar hur det som visas ser ut eller beter sig.</li>
+		</ol>
+		<h2>Struktur</h2>
+		<h5>BODY</h5>
+		Taggen <code>&lt;body&gt;</code> markerar dokumentets kropp, alltså det som visuellt visas på webbsidan, så som text, hyperlänkar och listor.
+		<h5>HEAD</h5>
+		Taggen <code>&lt;head&gt;</code> innehåller information om dokumentet som inte är direkt synligt i webbsidans kropp, så som sidans titel (<code>&lt;title&gt;</code>), stil (<code>&lt;style&gt;</code>)
+		<h5>HTML</h5>
+		Taggen <code>&lt;html&gt;</code> talar om för webbläsaren att dokumentet är ett HTML-dokument och därmed ska tolkas som ett sådant.
+		<h5>TITLE</h5>
+		Taggen <code>&lt;title&gt;</code> markerar namnet på webbsidan vilket visas i dess verktygsfält. Det är också detta som blir namnet om webbsidan sparas som favorit samt visningsnamn vid sökning via sökmotor.
+		<h2>Metainformation</h2>
+		<code>&lt;meta&gt;</code>-taggar innehåller information om data i dokumentet, utan att datan syns i dokumentet. Istället är det information som är av vikt för exempelvis sökmotorer. Metainformation anges i dokumentets <code>head</code>-del.
+		<h5>AUTHOR</h5>
+		Författaren till ett dokument specificeras enligt följande: <code>&lt;meta name="author" content="Förnamn Efternamn"&gt;</code>. Attributet <code>author</code> talar om vilken typ av metadata som avses medan <code>content</code> är värdet som finns i metadatan.
+		<h5>DESCRIPTION</h5>
+		En beskrivning av webbsidan kan plockas upp av en sökmotor för att generera träffar vid sökningar som liknar eller motsvarar beskrivningen. Exempel: <code>&lt;meta name="description" content="Basic HTML5 education"&gt;</code>.
+		<h5>GENERATOR</h5>
+		Generator-attributet används när dokumentet har genererats av en mjukvara. Är dokumentet handskrivet behöver detta inte anges. Exempel: <code>&lt;meta name="generator" content="Frontpage 4.0"&gt;</code>.
+		<h5>HTTP-EQUIV</h5>
+		Ger möjlighet att skicka med ett innehåll till HTTP-fältet, utöver namngivningen av fältet som görs med <code>&lt;name></code>-attributet.
+		<h5>KEYWORDS</h5>
+		I attributet anges en lista med nyckelord vars syfte är att hjälpa sökmotorer förstå vad sidan handlar om och generera sidan som en relevant träff. Nyckelorden separeras med kommatecken. Exempel: <code>&lt;meta name="keywords" content="HTML, Webbprogrammering, HTML5, Taggar, Attribut"&gt;</code>.
+		<h5>ROBOTS</h5>
+		Möjliggör gränssättning för hur sökmotorers "spindlar" får arbeta sig igenom webbsidan. Till exempel kan man önska att sökmotorn endast ska styra in användare via startsidan, varför man sätter attribut <code>content="noindex"</code> på övriga sidor. Ska länkar till andra sidor inte användas av spindeln används attributet <code>content="nofollow"</code>
+		<h2>Text</h2>
+		<h5>BLOCKQUOTE</h5>
+		Taggen <code>&lt;blockquote&gt;</code> markerar ett stycke som är citerat från en annan källa. Källan anges genom att skriva koden enligt följande exempel: <code>&lt;blockquote cite="http://www.w3schools.com/tags/tag_blockquote.asp"&gt;</code>Citat<code>&lt;/blockquote&gt;</code>
+		<h5>DIV</h5>
+		Taggen <code>&lt;div&gt;</code> definierar ett stycke i ett HTML-dokument som ska tilldelas en viss egenskap, till exempel en specifik färg på texten. Koden <code>&lt;div style="color:#00CC00"&gt;Grön text&lt;/div&gt;</code> ger till exempel resultatet: <div style="color:#00CC00">Grön text</div>
+		<h5>H1, H2, H3, H4, H5, H6</h5>
+		Taggarna <code>&lt;h1&gt; - &lt;h6&gt;</code> används för att markera text som rubrik. <code>&lt;h1&gt;</code> avser huvudrubrik medan <code>&lt;h6&gt;</code> representerar den minst viktiga rubriknivån. Exempel på taggar skrivna med sina motsvarande rubriktaggar:
+		<h1>&lt;h1&gt;</h1>
+		<h2>&lt;h2&gt;</h2>
+		<h3>&lt;h3&gt;</h3>
+		<h4>&lt;h4&gt;</h4>
+		<h5>&lt;h5&gt;</h5>
+		<h6>&lt;h6&gt;</h6>
+		<h5>P</h5>
+		Taggen <code>&lt;p&gt;</code> markerar ett stycke i en text.
+		<h5>PRE</h5>
+		Taggen <code>&lt;pre&gt;</code> markerar ett fördefinierat textstycke, formaterat till ett teckensnitt med fast bred. Båda blanksteg och radbrytningar som skrivs inom taggen visas också i webbläsaren. Till exempel ger koden:
+		<pre>&lt;pre&gt;Blanksteg     och radbrytningar
+		tas i beaktande till skillnad från om de skrivs som vanlig text i koden&lt;/pre&gt;</pre>
+		Ger resultatet:
+		<pre>Blanksteg    och radbrytningar
+		tas i beaktande till skillnad från om de skrivs som vanlig text i koden</pre>
+		<h5>SPAN</h5>
+		Taggen <code>&lt;span&gt;</code> markerar kan användas till att till exempel higlighta en del av en text genom att anropa färgkoden i taggen.
+		<p>
+			Exempel: Att skriva färgen <span style="color:blue">röd</span> med <span style="color:red">blå</span> färg och vice versa är lite förvirrande.
+		</p>
+		<h2>Hypertext</h2>
+		Hypertext används till att länka till en annan webbsida, ett dokument, en fil eller specifik plats i en fil. Detta genom att använda taggen
+		<code>&lt;a&gt;</code>. Exempel: Koden <code>&lt;a href="http://www.hammarbyfotboll.se"&gt;Bajen&lt;/a&gt;</code> ger den absoluta länken <a href="http://www.hammarbyfotboll.se">Bajen</a>
+		<h5>RELATIV LÄNK</h5>
+		En relativ länk används inom ett dokument eller webbsida. Exempelvis kan länken peka på ett annat HTML-dokuments, som representerar en specifik sida på webbplatsen, sökväg.
+		<h5>ABSOLUT LÄNK</h5>
+		En absolut länk pekar istället mot en extern webbplats, alltså en specifik URL
+		<h5>LÄNK TILL ANKARE</h5>
+		En länk till ankare pekar på en specifik plats i ett dokument eller webbplats. Vid målet för länken behöver en kod av typen
+		<code>&lt;a name="topp_ankare"&gt;&lt;/a&gt;</code> anges. Det är till denna taggs plats i dokumentet som ankarlänken sedan kommer peka. Länken som pekar mot ankaret skrivs
+		<code>&lt;a href="#topp_ankare"&gt;Till toppen av sidan&lt;/a&gt;</code>. Exempel:
+		<a href="#topp_ankare">Till toppen av sidan</a>
+		<h5>Bildlänk</h5>
+		Det är också möjligt att använda en bild som klickbar hyperlänk istället för understruken text. Istället för länkens beskrivning anges istället bildens sökväg:
+		<code>&lt;a href="http://www.hammarbyfotboll.se"&gt;&lt;img src="hammarby_emblem.gif" alt="Hammarby IF Logotype" width="150" height="150"&lt;/a&gt;</code>. 
+		<p>
+			Resultatet blir:
+			<a href="http://www.hammarbyfotboll.se"><img src="hammarby_emblem.gif" alt="Hammarby IF Logotype" style="width:150px;height:150px;"></a>
+		</p>
+		<h5>LÄNK TILL PROTOKOLL</h5>
+		Länkning till protokoll kan finnas behov av om till exempel en fil i ett filarkiv av FTP-typ ska nås. Även länkning till URL är en typ av protokollänkning då http är ett protokoll.
+		<h5>MAILTO-LÄNK</h5>
+		Genom att använda <code>mailto</code>-attributet möjliggörs att skapa en länk som resulterar att e-postklienten öppnas med ett påbörjat mail där den i taggen angivna e-postadressen är inlagd som mottagare. Kodexempel: <code>&lt;a href="mailto:togu6504@student.su.se"&gt;Klicka här för att kontakta mig&lt;/a&gt;</code> resulterar i länken <a href="mailto:togu6504@student.su.se">Klicka här för att kontakta mig</a>
+		<h2>Listor</h2>
+		Gemensamt för alla listor är att en lista skapas, inom vilken listelementen i sin tur skapas.
+		<h5>OORDNAD LISTA</h5>
+		Taggen <code>&lt;ul&gt;</code> (Unordered List) definierar den oordnade listan. Varje element i listan initieras genom taggen <code>&lt;li&gt;</code> (LIst element). Exempel: 
+		<ul>
+			<li>1a punkten</li>
+			<li>2a punkten</li>
+			<li>3e punkten</li>
+		</ul>
+		<h5>ORDNAD LISTA</h5>
+		Taggen <code>&lt;ol&gt;</code> (Ordered List) definierar den ordnade listan. Varje element i listan initieras genom taggen <code>&lt;li&gt;</code>. Exempel:
+		<ol>
+			<li>januari</li>
+			<li>februari</li>
+			<li>mars</li>
+			<li>april</li>
+			<li>maj</li>
+		</ol>
+		<h5>BESKRIVEN LISTA</h5>
+		Beskriven listan används med fördel när ett ord eller kortare mening behöver en längre beskrivning. Rubriken sätts med taggen <code>&lt;dt&gt;</code> och den infällda beskrivningen med <code>&lt;dd&gt;</code>. Koden kan se ut som följer: <code>&lt;dt&gt;A&lt;/dt&gt;&lt;dd&gt;Alfabetets första bokstav&lt;/dd&gt;</code>. Exempel på resultat: 
+		<dl>
+			<dt>A</dt>
+			<dd>Alfabetets första bokstav</dd>
+			<dt>B</dt>
+			<dd>Alfabetets andra bokstav</dd>
+			<dt>C</dt>
+			<dd>Alfabetets tredje bokstav</dd>
+		</dl>
+		<h2>Tabell</h2>
+		<h5>CAPTION</h5>
+		Taggen <code>&lt;caption&gt;</code> definierar tabellens rubrik. Placeras inom kroppen på <code>&lt;table&gt;</code>-taggen
+		<h5>TABLE</h5>
+		Taggen <code>&lt;table&gt;</code> definierar tabellens kropp. Inom denna anger man villkoren för tabellen. Om ram önskas runt cellerna anger attributet <code>border="1"</code>, annars ritas inte ramarna ut.
+		<table border="1">
+			<caption>Tabellens namn/rubrik</caption>
+			<tbody><tr>
+				<th>Kolumnrubrik 1</th>
+				<th>Kolumnrubrik 2</th>
+			</tr>
+			<tr>
+				<td>Kolumntext 1</td>
+				<td>Kolumntext 2</td>
+			</tr>	
+		</tbody></table>
+		<h5>TD</h5>
+			Taggen <code>&lt;td&gt;</code> (Table Data)representerar "vanlig" text i tabellcellerna. Placeras inom <code>&lt;tr&gt;</code>-kroppen
+		<h5>TH</h5>
+			Taggen <code>&lt;th&gt;</code> (Table Heading)representerar rubriktext i tabellcellerna. Placeras inom <code>&lt;tr&gt;</code>-kroppen
+		<h5>TR</h5>
+			Taggen <code>&lt;tr&gt;</code> (Table Row) representerar en rad i tabellen. Hur många objekt av <code>&lt;th&gt;</code> eller <code>&lt;td&gt;</code> som skapas inom varje <code>&lt;tr&gt;</code> avgör antalet kolumner på raden. 
+		<h2>Bild</h2>
+		<h5>IMG</h5>
+		En bild går att använda till olika funktioner, till exempel både som enbart en bild på webbsidan och som en klickbar länk (se exempel under Hypertext).En bild läggs in genom följande kommandon: <code>&lt;img src="laptop.png"&gt;</code>. Resultatet med denna kod blir: <img src="laptop.png" alt="exempelbild" />
+		Andra användsbara attribut är: <code>alt="text"</code> som ger en alternativ text på bildens plats om den inte skulle gå att visa.
+		<h2>Bildkartor</h2>
+		<h5>AREA</h5>
+		Taggen <code>&lt;area&gt;</code> representerar de klickbara områden som ska innehålla bilder genom anrop med URL. Taggen <code>&lt;area&gt;</code> kan ha följande attribut:
+		<dl>
+			<dt><code>shape</code></dt>
+			<dd><code>rect</code> ger rektangel</dd>
+			<dd><code>circle</code> ger cirkel</dd>
+			<dd><code>polygon</code> ger polygon</dd>
+			<dd><code>default</code> representerar hela bilden, alltså vad som sker om man klickar inom kartan men utanför något av de andra områdena.</dd>
+			<dt><code>coords</code></dt>
+			<dd>Används till att tala om vilka koordinater området avser.
+			<dt><code>href</code></dt>
+			<dd>Anger den URL som användaren ska länkas vidare till om hen klickar på bilden.</dd>
+			<dt><code>alt</code></dt>
+			<dd>En alternativ text som beskriver området i det fall bilden inte kan visas.</dd>
+		</dl>
+		<h5>MAP</h5>
+		Taggen <code>&lt;map&gt;</code> representerar kartans struktur. Attributen <code>name</code> och <code>id</code> läggs in för att bilderna i kartan ska kunna referera till just den kartan.
+		<p>
+			<img src="planets.jpg" alt="Planeter" width="300" height="225" usemap="#mymap">
+			<map name="mymap" id="mymap">
+				<area shape="circle" coords="30,25,30" alt="Solen" href="https://sv.wikipedia.org/wiki/Solen">
+			</map>
+		</p>
+		I exemplet ovan är bilden av planeterna själva kartan (<code>&lt;map></code>) och ett område (<code>&lt;area></code>) över solen har gjorts klickbart med länkning till wikipedias sida om solen
+	</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 2.2 - Text och Listor
+		</title>
+		<link rel="stylesheet" href="design.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.2 - Text och Listor</h1>
+			<nav>
+				<a href="index.html">Hem</a><br />
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>
+			<h3>Fontfamilj</h3>
+			<dl>
+				<dt>Serif</dt>
+				<dd id="serifed">Inom serif-familjen finns de teckensnitt som har små 'hakar' på tecknen, likt denna text. Exempel på detta är Times New Roman</dd>
+				<dt>Sans-serif</dt>
+				<dd id="sans-serifed">Teckensnitt i familjen sans-serif saknar istället dessa hakar, likt denna text. Används med fördel på text som ska läsas på skärm</dd>
+				<dt>Monospace</dt>
+				<dd id="monospaced">Monospace är precis vad det låter som - teckensnitt där varje tecken tar lika stor plats, oavsett om det är 'i' eller 'w', likt denna text</dd>
+			</dl>
+			<h3>Enheter</h3>
+			<h5>Nyckelord</h5>
+			<p>Att sätta <code>font-size: medium</code> är onödigt eftersom detta är default-storleken på brödtext, rubrik eller annat. Enheterna <code>xx-small, x-small, small, large, x-large</code> samt <code>xx-large</code> är sedan korrigering i förhållande till <code>medium</code></p>
+			<h5><code>%</code></h5>
+			<p>Sätter textens storlek i procentuellt förhållande till den ursprungliga textstorleken.</p>
+			<h5><code>em</code></h5>
+			<p>Fungerar likadant som <code>%</code> men med skillnaden att storleksförhållande anges enligt exemplet: <code>2em</code> ger dubbelt så stor text som ursprungsstorleken.</p>
+			<h3>Färg</h3>
+			<p>Färg på text anges genom att tilldela den berörda selektorn (antingen ett specifik stycke, texttyp eller hela sidans text) <code>color: färg</code>. Det finns fördefinierade färger, till exempel <code>red, blue green, yellow</code> o.s.v. Det går också utmärkt att bestämma färg genom hexadecimala värden (Ex: <code>#ff0000</code> för röd) eller RGB-värde (Ex: <code>rgb(255,0,0)</code> också för röd). Test nedan:</p>
+			<p id="hexcolor">
+				color: #ff0000;
+			</p>
+			<p id="rgbcolor">
+				color: rgb(255,0,0)
+			</p>
+			<p>Samma färg men genom två olika anrop i CSS-dokumentet.</p>
+			<h3>Teckensnitt</h3>
+			<h5><code>font-family</code></h5>
+			<p>Font-family är grupperingar av teckensnitt, där de inom respektive grupp delar egenskaper. De som finns är: Serif, Sans-serif och Monospace. Genom att ange att en text eller ett stycke ska visas med en <code>font-family</code> och inte ett specifikt teckensnitt garderar för fel som kan uppstå om en webbläsare inte stödjer det specifik teckensnittet. Exempel:</p>
+			<p id="serif">
+				Denna text är skriven med <code>serif</code> angiven som teckensnitt, alltså inget specifikt teckensnitt. Piggarna i änden av bokstäverna är seriferna
+			</p>
+			<p id="sansserif">
+				Denna text är skriven med <code>sans-serife</code> angiven som teckensnitt, alltså inget specifikt teckensnitt. Här saknas piggarna
+			</p>
+			<p id="mono">
+				Denna text är skriven med <code>monospace</code> angiven som teckensnitt, alltså inget specifikt teckensnitt. Varje tecken tar lika mycket utrymme
+			</p>
+			<h5><code>font-stretch</code></h5>
+			<p>Ingen webbläsare stödjer idag <code>font-stretch</code> enligt w3schools.com. OM det hade funnits stöd för denna funktion hade det varit möjligt att ange att en text skulle ta mer eller mindre utrymme.</p>
+			<h5><code>font-size</code></h5>
+			<p>Används för att ange teckenstorlek på text eller stycken. Kan antingen anges i antal pixlar eller mm. Det är också möjligt att ange storlek i förhållande till normalstorleken - Antingen via procent eller via exempelvis <code>x-small</code> och <code>xx-large</code>. Texten som följer är angiven med <code>font-size: 150%</code>:<p id="fontsize">Text i 150% storlek</p>
+			<h5><code>font-size-adjust</code></h5>
+			<p>Först och främst stöds idag denna funktion endast i webbläsaren Firefox. Som visas i beskrivningen av <code>font-family</code> ovan har olika teckensnittsfamiljer olika storlek. Ska texten ha samma storlek oavsett teckensnittsfamilj kan <code>font-size-adjust</code> användas. Exempel nedan:</p>
+			<div id="fontadjust1serif">
+				Två delar med samma <code>font-size-adjust</code> angivet
+			</div>
+			<div id="fontadjust1sans">
+				Två delar med samma <code>font-size-adjust</code> angivet
+			</div>
+			<div id="nofontadjust2serif">
+				Två delar utan <code>font-size-adjust</code> angivet
+			</div>
+			<div id="nofontadjust2sans">
+				Två delar utan <code>font-size-adjust</code> angivet
+			</div>
+			<h5><code>font-style</code></h5>
+			<p>Med <code>font-style</code> kan man ange om typsnittet ska vara:</p>
+			<div id="normfont">rakt (<code>normal</code>)</div>
+			<div id="itafont">kursivt (<code>italic</code>)</div>
+			<div id="oblfont">oblikt (<code>oblique</code>)</div>
+			<h5><code>font-variant</code></h5>
+			<p>Denna egenskap gör det möjligt att ange att en text enbart ska bestå av kapitäler, där det små bokstäverna byts ut mot mindre versaler. Detta genom att ange <code>small-caps</code></p>
+			<div id="fontvariant">Denna mening är skriven på detta sätt. Notera att varje menings begynnelsebokstav är större, medan resten är mindre versaler</div>
+			<h5><code>font-weight</code></h5>
+			<p>Anger hur tjocka tecknen i typsnittet ska visas. Standardvärdet är <code>normal</code>, men följande alternativ kan också anges:</p>
+			<div id="boldfont">Fet text (<code>bold</code>)</div>
+			<div id="bolderfont">Fetare text (<code>bolder</code>)</div>
+			<div id="lighterfont">Tunnare text (<code>lighter</code>)</div>
+			<p>Det är också möjligt att ange tecknens tjocklek genom ett jämt hundratal mellan 100 och 900.</p>
+			<h3>Text</h3>
+			<h5><code>letter-spacing</code></h5>
+			<p>Egenskapen anger mellanrummet mellan tecknen, genom antal pixlar. Även negativt värde är möjligt. Exempel nedan:</p>
+			<div id="exspace">Extra mycket mellanrum</div>
+			<div id="lesspace">Extra lite mellanrum</div>
+			<h5><code>word-spacing</code></h5>
+			<p>Samma egenskap som nedan fast avser mellanrummet mellan orden i en text:</p>
+			<div id="exwspace">Extra mycket mellanrum mellan orden</div>
+			<div id="leswspace">Extra lite mellanrum mellan orden</div>
+			<h5><code>line-height</code></h5>
+			<p>Avståndet mellan raderna i en text anges med egenskapen <code>line-height</code>, angivet med procent där 100 är standard. Exempel:</p>
+			<p id="leslinespace">
+				Avstånd mellan raderna är 50%<br>
+				Avstånd mellan raderna är 50%<br>
+				Avstånd mellan raderna är 50%<br>
+			</p>
+			<p id="exlinespace">
+				Avstånd mellan raderna är 200%<br>
+				Avstånd mellan raderna är 200%<br>
+				Avstånd mellan raderna är 200%<br>
+			</p>
+			<h5><code>text-align</code></h5>
+			<p>Egenskapen används för att ange textens horisontella placering, genom värdena <code>left, center</code> eller <code>right</code>. Exempel: </p>
+			<p id="toleft">Text till vänster</p>
+			<p id="tocenter">Text i mitten</p>
+			<p id="toright">Text till höger</p>			
+			<h5><code>text-decoration</code></h5>
+			<p>Egenskapen används för att dekorera texten, genom värdena <code>underline, overline, line-through</code> som ger ett streck under, över respektive genom texten. Exempel: </p>
+			<p id="decounder">Med ett streck under</p>
+			<p id="decoover">Med ett streck över</p>
+			<p id="decothrough">Med ett streck igenom</p>			
+			<h5><code>text-shadow</code></h5>
+			<p>Egenskapen används för att ge texten skuggning. Anges med skuggans pixelmässiga förskjutning på bredden, höjden samt färg. Exempel: </p>
+			<h1 id="textshadow">Denna text har fått en skugga med tre pixlars förskjutning på både höjd och bredd, samt färgen grön</h1>
+			<h5><code>text-indent</code></h5>
+			<p>Egenskapen används för att ge textstyckets första rad en förskjutning, vilket anges i antalet tidigare beskrivna enheter eller genom procent av styckets bredd. Exempel med 50 pixlars förskjutning på första raden: </p>
+			<p id="textindent">
+				Just idag är jag stark,Just idag mår jag bra, Jag förs framåt av kraftiga vindar. Just idag är jag stark, Just idag mår jag bra, Jag har tron på mig själv på min sida. 
+				Jag har väntat så länge på just den här dan, Och det är skönt att den äntligen kommer. Väntat så länge på just denna dag, Den ger lust när den kommer. 
+				Jag ser måsarnas flykt, Jag ser solglittrets dans, Jag ser fram emot härliga tider. Jag ser kvinnornas ben, Jag ser ögonens glans, Jag har tron på mig själv på min sida. 
+				Jag har väntat så länge på just den här dan, Och det är skönt att den äntligen kommer. Väntat så länge på just denna dag, Den ger lust när den kommer. 
+			</p>			
+			<h5><code>text-transform</code></h5>
+			<p>Egenskapen används för att omvandla text mellan gemener och versaler, genom värdena <code>uppercase</code> (endast stora bokstäver), <code>lowecase</code> (endast små bokstäver) eller <code>capitalize</code> (stor begynnelsebokstav, renst små). Exempel: </p>
+			<dl>		
+				<dt>normal</dt>
+				<dd>DetTa äR tEXteNs URSprUngLIgA utSeENdE</dd>
+				<dt>uppercase</dt>
+				<dd id="upcase">DetTa äR tEXteNs URSprUngLIgA utSeENdE</dd>
+				<dt>lowercase</dt>
+				<dd id="lowcase">DetTa äR tEXteNs URSprUngLIgA utSeENdE</dd>
+				<dt>capitalize</dt>
+				<dd id="capitcase">DetTa äR tEXteNs URSprUngLIgA utSeENdE</dd>
+			</dl>
+			<h5><code>white-space</code></h5>
+			<p>Egenskapen används för att hantera böanksteg och radbrytningar, alltså tecken som inte syns. Som standard bakas flera i följd förekommande blanksteg ihop till ett, och radbrytningar tas inte med. Detta kan påverkas genom egenskapen <code>white-space</code>: </p>
+			<p id="nowrap">Värdet <code>nowrap</code> tar bort överflödiga blanksteg men bryter aldrig raden. Ett alldeles för långt stycke kommer alltså försvinna utanför det fönster som det visas i, på det sätter bara fortsätta, fortsätta, fortsätta, fortsätta, fortsätta, fortsätta, fortsätta, fortsätta, fortsätta, fortsätta och fortsätta.</p>
+			<p id="pre">Värdet <code>pre</code> tar mellanslag       i beaktande och bryter bara raden där radbrytningar är initierade i texten. Tillexempel härliga
+			..         och härliga
+			           !</p>
+			<p id="preline">Värdet <code>pre-line</code> tar bort överflödiga blanksteg. Radbrytningar kommer ske både när det är nödvändigt för att texten ska få plats i webbläsaren och när de finns i texten - som här:
+			..........</p>
+			<p id="prewrap">Värdet <code>pre-wrap</code> behåller multipla blanksteg           men bryter raden av sig självt när webbläsarfönstrets utrymme tar slut, samt om det förekommer radbrytningar i texten.</p>
+			<h3>Stycken</h3>
+			<h5><code>p:first-line</code></h5>
+			<p>Egenskapen <code>p:first-line</code> handlar om att i ett stycke (<code>p</code>) tilldela dess första rad en specifik egenskap. Exemplet nedan har tilldelats egenskapen att bakgrundsfärgen ska ha värdet grön: </p>
+			<p id="firstlinep">Hela denna radens bakgrund är gul egenom tilldelningen <code>p#firstlinep:first-line{background-color: #00FF00;}</code></p>
+			<h5><code>p:first-letter</code></h5>
+			<p>Egenskapen <code>p:first-letter</code> har samma funktion som <code>p:first-line</code> fast avser endast styckets första tecken. Exemplet nedan har tilldelats egenskapen att bakgrundsfärgen ska ha värdet grön: </p>
+			<p id="firstletterp">Hela denna radens bakgrund är gul egenom tilldelningen <code>p#firstletterp:first-letter{background-color: #00FF00;}</code></p>
+			<h3>Listor</h3>
+			<h5><code>list-style-image</code></h5>
+			<p>Egenskapen används till att i en lista byta ut listobjektsmarkören till en bild.</p>
+			<ul id="bajenlist">
+				<li>Första punkten</li>
+				<li>Andra punkten</li>
+				<li>Tredje punkten</li>
+			</ul>
+			<h5><code>list-style-position</code></h5>
+			<p>Egenskapen används till att förskjuta listobjekten. Värden som finns är: <code>inside</code> och <code>outside</code> där det sistnämnda är defaultvärdet. Rent praktiskt handlar det om att välja om listobjektsmarkören ska finnas utanför själva listan eller inne i listan. Listan har samma placering, men placeras markören inanför förskjuts hela listan till höger. Nedan exempel har värdet <code>inside</code>, jämför med tidigare lista</p>
+			<ul id="bajenlist2">
+				<li>Första punkten</li>
+				<li>Andra punkten</li>
+				<li>Tredje punkten</li>
+			</ul>
+			<h5><code>list-style-type</code></h5>
+			<p>Egenskapen används till att tilldela markörerna fördefinierade formegenskaper. För oordnade listor finns alternativen <code>disc, circle, square, none</code> och för ordnade listor finns en uppsjö alternativ, både latinska och romerska tecken samt motsvarande på en mängd olika språk. Exemplen nedan är oordnade listor med <code>square</code> respektive <code>none</code>: </p>
+			<ul id="squarelist">
+				<li>Första punkten</li>
+				<li>Andra punkten</li>
+				<li>Tredje punkten</li>
+			</ul>
+			<ul id="nonelist">
+				<li>Första punkten</li>
+				<li>Andra punkten</li>
+				<li>Tredje punkten</li>
+			</ul>
+		<footer>
+			Copyright: Tobias Gunnarsson, 2015
+		</footer>
+	</body>
+</html>

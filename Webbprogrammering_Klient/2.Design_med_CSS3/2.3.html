@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 2.3 - Marginaler, kantlinjer och paddning
+		</title>
+		<link rel="stylesheet" href="design.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.3 - Marginaler, kantlinjer och paddning</h1>
+			<nav>
+				<a href="index.html">Hem</a><br />
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>
+		<h3>Marginaler</h3>
+		<p>Marginaler inom CSS handlar om att tilldela linjer för objekt att förhålla sig till. Det går att tilldela marginaler vad gäller topp, botten, höger och vänster på samma gång genom att använda egenskapen <code>margin</code>, men behov kan finnas att sytra det ena eller det andra, vilket påvisas här nedan.</p>
+		<h5><code>margin-top</code></h5>
+		<p>Genom egenskapen tilldelas en linje i det kringliggande objektets överkant som objektet ska förhålla sig till. Värdena kan anges i tidigare beskrivna enheter eller i procent. Exemplet nedan har tilldelats en toppmarginal på 20 pixlar.</p>
+		<div id="margtop">20 pixlars marginal uppåt till föregående objekt</div>
+		<div id="margbottom">30 pixlars marginal nedåt till efterföljande objekt</div>
+		<div id="margright">5000 pixlars marginal till högerliggande objekt</div>
+		<div id="margleft">40 pixlars marginal till vänsterliggande objekt</div>
+		<h3>Kantlinjer</h3>
+		<h5><code>Definiering</code></h5>
+		<p>Kandlinjer (<code>border</code>) är en egenskap som används till att sätta en ram runt objekt. För att sedan ge egenskaper åt respektive del av ramen kan van använda <code>border-top, border-bottom, border-right</code> samt <code>border-left</code> och sedan sätta egenskaper och värden till respektive del. I nedan exempel har jag definierat en ram av typen <code>solid</code>, vilket innebär heldragen linje, runt ett stycke: </p>
+		<p id="pdefborder">
+			En text med ram runt
+		</p>
+		<p>Det går exempelvis att tilldela endast en ram under eller över ett objekt. Också kan jag genom att använda respektive ramdelsrepresentation kan jag ge respektive del en egen typ: </p>
+		<p id="pmixborder">
+			En text med ram runt, av olika typer
+		</p>
+		<p>Eller att hela ramen är svar heldragen, förutom den nedre delen som är röd och prickad: </p>
+		<p id="pmixborderred">
+			En text med ram runt, helsvart förutom under där den är röd och prickad.
+		</p>
+		<h5><code>Färg</code></h5>
+		<p>Vill jag sätta färg på ramen går det att att ange <code>border-top-color, border-bottom-color, border-left-color</code> samt <code>border-right-color</code> om man vill tilldela olika delar av ramen olika färger. Ska hela ramen ha samma färg används <code>border-color</code>.</p>
+		<p id="pcolorborder">
+			En text med ram runt i olika färger
+		</p>
+		<h5><code>Stil</code></h5>
+		<p>Egenskapen <code>border-style</code> sätter värden på en hel rams respektive sidor i ordningen <code>border-style: UPPE, HÖGER, NERE, VÄNSTER</code> eller <code>border-style: UPPE, HÖGER+VÄNSTER, NERE</code> eller <code>border-style: UPPE+NERE, HÖGER+VÄNSTER</code> eller <code>border-style: ALLA_SIDOR</code>. Koden <code>{border-style: solid double}</code> ger nedan utseende:</p>
+		<p id="pbordstyle">
+			En text med ram runt av enkel linje uppe och nere respektive dubbel linje på sidorna.
+		</p>
+		<p>Det är också möjligt att ange stil på ramen genom de delspecifika <code>border-top-style, border-bottom-style, border-right-style, border-left-style</code></p>
+		<h5><code>Storlek</code></h5>
+		<p>När det kommer till <code>border-width</code> handlar det om att ange tjockleken på ramen. De fördefinierade värdena är <code>thin, thick</code> samt <code>medium</code> där det sistnämnda är standard. Det går också att ange tjockleken med tidigare beskrivna enheter, som till exempel antal pixlar eller millimeter. Det är också möjligt att ange egenskaper för en specifik del av ramen genom egenskaperna <code>border-top-width, border-bottom-width, border-right-width</code> samt <code>border-left-width</code>. Nedan exempel på ram med tjock ram underst och smal på övriga delar: </p>
+		<p id="pmixwidth">
+			En text med ram runt, tjock längst ner och smal på övriga sidor.
+		</p>
+		<h3>Paddning</h3>
+		<p>Med padding avses utrymmet mellan ramen och innehållet i ramen. Avståndet kan anges i tidigare beskrivna enheter eller med procent. Vill man ange för hela ramen kan koden exempelvis skrivas: <code>padding: 5px 10px 5px 10px;</code>. Resultatet blir då enligt nedan:</p>
+		<p id="paddedp">
+			En text med ram och paddning på fem pixlar uppe och nere, 10 pixlar till höger och vänster.
+		</p>
+		<p>Det är också möjligt att bestämma utrymmet genom egenskaperna <code>padding-top, padding-bottom, padding-left, padding-right</code></p>
+		<h3>Outlines</h3>
+		<p>En outline är en linje som ritas utanför ramen, för att markera området ytterligare. Antingen kan den skrivas med syntax: <code>{outline: FÄRG TYP TJOCKLEK}</code>, där koden <code>outline: #FF0000 dotted thick;</code> tillagt till senaste ramen får resultatet enligt nedan:</p>
+		<p id="outlinedp">
+			En text med ram och paddning på fem pixlar uppe och nere, 10 pixlar till höger och vänster.
+		</p>
+		<p>Önskas bara en delegenskap hos oulinen anges kan följande alternativ användas: <code>outeline-color, outline-style</code> samt <code>outline-width</code></p>
+		<h3>Egenskaper för synlighet</h3>
+		<h5>visibility</h5>
+		<p>Egenskapen <code>visibility</code> avgör om ett objekt ska vara synligt eller inte. Möjliga värden är <code>visible, hidden</code> samt <code>collapse</code> där det sistnämnda endast är tillgängligt på tabellobjekt. Viktigt är att genom användning av visibility finns elementet fortfarande kvar, bara det att det inte syns om det är gömt. Som standard har alla element värdet <code>visible</code>. Genom koden <code>visibility: hidden</code> visas inte objektet. Exempel finns nedan, kan du se det?</p>
+		<div id="divhidden">
+			Denna text syns inte
+		</div>
+		<p>Här ovanför finns texten. Den syns inte men tar fortfarande upp utrymme.</p>
+		<h5>clip</h5>
+		<p>Med egenskapen <code>clip</code> beskärs en ett element utifrån dess ursprunliga mått. Värdet på marginalera sätts enligt <code>rect(UPPE, HÖGER, NERE, VÄNSTER)</code>. </p>
+		<div id="clipbox">
+			Denna text finns i en ruta som är begränsad till 100 pixlars bredd och med gul bakgrund
+		</div>
+			Nedan finns en identisk ruta men nu beskuren enligt <code>clip:rect(0px,50px,50px,0px)</code>
+		<div id="clipbox2">
+			Denna text finns i en ruta som är begränsad till 100 pixlars bredd och med gul bakgrund
+		</div>
+		<br>
+		<br>
+		<br>
+		<h5>display</h5>
+		<p>Med egenskapen <code>display</code> kan man styra hur ett element ska visas. Ett blockelement, exempelvis stycke (<code>p</code>) kan göras till ett inline element. Åt andra hållet kan ett inlineelement, exempelvis <code>span</code> göras om till ett blockelement. I exemplet nedan visas först ett stycke med ett kursivt <code>span</code>-element. I nästa exempel används samma kod men stycket har givits egenskap respektive värde: <code>display: inline</code> medan det kursiva ordet har givits <code>display: block</code>.</p>
+		<p id="dispnormal">
+			Denna text är skriven i ett stycke <code>p</code> för att visa ett tydligt exempel på hur man <span id="dispspan1">INTE</span> ska användas!
+		</p>
+		<p id="dispwrong">
+			Denna text är skriven i ett stycke <code>p</code> för att visa ett tydligt exempel på hur man <span id="dispspan2">INTE</span> ska användas!
+		</p>
+		<p>I första exemplet visas det som det är tänkt. Ett stycke med ett infällt span-element med specifika egenskapen att det visas kursivt. I andra exemplet görs span-elementet till ett blockelement, vilket resulterar i att det hamnar på en egen rad. </p>
+		<h5>overflow</h5>
+		<p>Med egenskapen <code>overflow</code> anges vad som ska hända med innehåll som inte får plats inom ett begränsat element. Möjliga värden är: <code>visible, hidden, scroll, auto</code>. Första exemplet nedan har värdet visible, vilket är standard - innehållet fortsätter utanför boxen:</p>
+		<p id="ofvisib">
+			Denna text visas i en grå ruta som är 100x100 pixlar stor. Trots att rutan sedan länge fyllts med text visas innehållet ändå fast utanför rutan.
+		</p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p>I exemplet nedan används värdet <code>hidden</code></p>
+		<p id="ofhidden">
+			Försvinner gör allt innehåll som inte ryms i den 100x100 pixlar stora gråa rutan.
+		</p>
+		Och här används <code>scroll</code>
+		<p id="ofscroll">
+			Denna text visas i en grå ruta som är 100x100 pixlar stor. Innehållet som inte får plats är nu möjligt att se genom att scrolla i rutan för att visa det som nyss var dolt.
+		</p>
+		<p>Värdet <code>auto</code> ska per automatik ge möjligheten att scrolla OM det är så att utrymmet inte räcker till.</p>
+		<h3>Egenskaper för box</h3>
+		<h5>Transparens</h5>
+		<p>Genom egenskapen <code>opacity</code> kan ett element göras transparant genom att sätta ett värde mellan 0.0 och 1.0. Nedan är två bilder, en utan transparens och en med <code>opacity: 0.5;</code></p><br>
+		<img src="bajenlogo.gif" alt="Hammarby logo">
+		<img src="bajenlogo.gif" id="opacityimg" alt="Hammarby logo">
+		<h5>Rundade hörn</h5>
+		<p>Samma bild igen. På första har jag endast lagt till en grön ram, på den andra har jag dessutom satt egenskapen <code>border-radius</code> värde till <code>10px</code></p>
+		<img src="bajenlogo.gif" id="framedimg" alt="Hammarby logo">
+		<img src="bajenlogo.gif" id="roundedimg" alt="Hammarby logo">
+		<h5>Multipla bakgrundsbilder</h5>
+		<p>Det går att lägga flera bakgrundsbilder i samma box på samma sätt som om man endast vill ha en bild, genom att separera de berörda bilderna med ett kommatecken: Exempel nedan:</p>
+		<p id="multibckgr">
+			[Kalle är arg på fotbollsplan]
+		</p>
+		<h5>Skuggning</h5>
+		<p>Det är möjligt att ge en box en skugga, genom egenskapen <code>box-shadow</code> följt av en enhet som värde som talar om hur stor skuggan ska vara. Nedan exempel med värdet satt till 5% (av boxens storlek).</p><br>
+		<img src="bajenlogo.gif" id="shadowedimg" alt="Hammarby logo"> 
+		<h5>Gradienter</h5>
+		<p>Gradienter innebär att kunna sätta en mjuk övergång mellan färger. För övergångar i olika riktningar anges egenskapen <code>linear-gradient</code> följt av möjliga värdena <code>down, up, left, right, diagonally</code>. I exemplet nedan sker övergång mellan grön och vit med värdena <code>to right, white, green</code>
+		<p id="gradient1">
+			Lite text i rutan...
+		</p>
+		<p>En variant på linjär gradient är den upprepande. Samma färger fast nu med koden: <code>background: repeating-linear-gradient(green 20%, white 20%)</code></p>
+		<p id="gradient2">
+			Lite text i rutan...
+		</p>
+		<p>Som alternativ till de linjära gradienter finns den radiala. Istället blir första färgen den som hamnar i mitten och efterkommande färger växer ut som ringar från mitten - detta eftersom cirkelform är standard. Form på övergången går att byta.</p>
+		<p id="gradient3">
+			Lite text i rutan...
+		</p>			
+		<footer>
+			Copyright: Tobias Gunnarsson, 2015
+		</footer>
+	</body>
+</html>

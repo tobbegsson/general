@@ -1,0 +1,8 @@
+p#browserp {
+	-moz-column-count: 2;
+	-moz-column-width: 20%;
+	-webkit-column-count: 3;
+	-webkit-column-width: 25%;
+	column-count: 4;
+	column-width: 10%;
+}

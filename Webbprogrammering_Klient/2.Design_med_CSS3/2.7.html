@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="design_2.7.css" type="text/css"/>
+		<title>
+			Uppgift 2.7 - Sidlayout
+		</title>		
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.7 - Sidlayout</h1>
+			<nav>
+				<a href="index.html">Hem</a>
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>
+		<p>Ett centralt attribut vid hantering av layouts är <code>position</code>, med vilket webbläsaren får veta hur ett element ska hanteras på sidan. Tillgängliga värden är <code>static</code>, <code>absolute</code>, <code>relative</code> samt <code>fixed</code>.</p>
+		<dl>
+			<dt>static</dt>
+			<dd>Detta är standardvärdet för <code>position</code>. Positionen är ej specificerad och alltid anpassad efter sidans "normala" flöde</dd>
+			<dt>absolute</dt>
+			<dd>Med detta värde sätts elementets position i förhållande till närmast omgivande element. Exempelvis kan en bild anges att alltid vara placerad i övre högre hörnet av en <code>&lt;div></code></dd>
+			<dt>relative</dt>
+			<dd>I motsats till <code>static</code> anpassar sig element nu inte efter sidans normala flöde utan relativt till sin ursprungliga placering, till exempel med 15 pixlars marginal från vänsterkanten</dd>
+			<dt>fixed</dt>
+			<dd>Elementet förhåller sig till webbläsarens "viewpoint" (det område som avser den visade webbsidan). Om sidan scrollas visas fortfarande elementet på samma plats i viewpointen</dd>
+			<dt>float</dt>
+			<dd>Med attributet <code>float</code> placeras ett element till höger eller vänster i det omgivande elementet, genom att ange <code>left</code> eller <code>right</code>. Anges flera element med exempelvis <code>float: left</code> kommer de lägga sig bredvid varandra i den mån de får plats. Vid sidan av flytande element kan andra element fortsätta flöda. Är detta icke önskvärt kan attributet <code>clear</code> användas med möjliga värdena <code>left</code>, <code>right</code> samt <code>both</code>. Med vänster och höger tillåts inga andra flytande element på den sida som anges. Vill ett elemt hamna där i webbläsarens normala flöde kommer radbrytning att ske. Anges <code>both</code> tillåts inga andra element på någon sida och radbrytning kommer alltid att ske</dd>
+			<dt>clear</dt>
+			<dd>Se förklaring under <code>float</code></dd>
+			<dt>z-index</dt>
+			<dd>Med <code>z-index</code> anges visningshierarkin för element OM de skulle ta upp samma visuella utrymme, genom att ange en siffra. Ju högre siffra desto högre prioritering. Ett element med <code>z-index: 2</code> kommer till exempel hamna över ett element med <code>z-index: 1</code> om de överlappar varandra. Detta kan jämföras med en sorterad kortlek där det högsta värdet ligger överst och därför är det som syns</dd>
+		</dl>
+		<p>Storlek på element är något som behöver göras. För att hantera detta kan nedan attribut användas:</p>
+		<dl>	
+			<dt>width</dt>
+			<dd>Elementets bredd, som anges i tidigare presenterade enheter</dd>
+			<dt>height</dt>
+			<dd>Som <code>width</code> fast det är elementets höjd som anges</dd>
+			<dt>min-width / min-height</dt>
+			<dd>Den minsta bredd/höjd som elementet kan få. Växer innehållet så att det inte får plats kommer elementet växa</dd>
+			<dt>max-width / max-height</dt>
+			<dd>Den maximala bredd/höjd elementet kan få. Växer innehållet så att det inte får plats när max-värdena har uppnåtts kommer elementet inte fortsätta att växa</dd>
+			<dt>vertical-align</dt>
+			<dd>Detta attribut används för att specificera hur ett element ska placeras på vertikalen. Detta exempel är ett <code>span</code>-element där <code>vertical-align: text-top</code> har angivits. <span id="testspan27">TEST</span> För att visa elementet tydligare har också kantlinjen färgats samt tilldelats större fontstorlek. Som påvisas placeras elementet med toppen i höjd med omgivande textens överkant</dd>
+		</dl>	
+		<h5>Fixerad layout</h5>
+		<p>Med fixerad layout anges fasta värden för elementens storlek. Minskas eller ökas fönstrets storlek ändras inte elementens storlek. <a href="2.7_fixed_example.html">Exempel på fixerad layout</a>. För att uppnå detta används en absolut enhet, till exempel px eller mm.</p>
+		<h5>Flytande layout</h5>
+		<p>Med flytande layout har elementen storlek angivet i procent i förhållande till omgivande element. Minskas fönstret så minskas elementen, ökas fönstrets storlek så sker samma sak med elementen. <a href="2.7_float_example.html">Exempel på flytande layout</a></p>
+		<h5>Elastisk layout</h5>
+		<p>Elastisk layout kan användas för sidor där användaren av någon anledning behöver större textstorlek för att kunna läsa sidan. Ökas storleken på texten så anpassar sig också det omgivande elementets storlek till att rymma texten. <a href="2.7_elast_example.html">Exempel på elastisk layout</a>. För att uppnå detta används den relativa enheten <code>em</code></p>
+		<h5>Text flödande i kolumner</h5>
+		<p>I CSS finns också ett layoutalternativ i form av kolumnering. Antalet kolumner anges med attributet <code>column-count</code> och varje kolumns bredd anges med attributet <code>column-width</code>. I exemplet nedan är all text skrivet i ett stycke, som tilldelats 10 rader som tar upp 10% av sidans bredd. Höjden på kolumnerna avgörs av hur mkt text som får plats i respektive kolumn, vilket fördelas jämt mellan dem.</p>
+		<p id="columnedp27">Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+		<footer>
+			Copyright: Tobias Gunnarsson, 2015
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<link href="jquery.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js_3.3.js"></script>
+		<title>
+			Uppgift 3.3 - DOM-objekt och jQuery
+		</title>
+		</head>
+	<body>
+		<header>
+			<h1>Uppgift 3.3 - DOM-objekt och jQuery</h1>
+		</header>
+		<h3>Formulärhändelser</h3>
+		<p>I exemplet nedan visas metoderna <code>focus()</code> och <code>blur()</code>.</p>
+		<p>Namn: <input type="text" id="name"></p>
+		<p>Ålder: <input type="text" id="age"></p>
+		<h3>mouseover och mouseout</h3>
+		<p>För markören över cirkeln nedan så ändrar den färg. När markören flyttas ut byts färgen tillbaka till ursprunget (egentligen byts den pånytt till samma färg som var från början)</p>
+		<div id="div1"></div>
+		<h3>click</h3>
+		<p>När du klickar på cirkeln nedan händer något vackert. Ramens färg ändras, liksom bakgrundsfärgen. Dessutom tillkommer ett textelement</p>
+		<div id="div2"></div>
+		<h3>remove()</h3>
+		<p>Klicka på cirklarna och se vad som blir kvar. Exemplifierar borttagning av element.</p>
+		<div id="div3_1">DIF</div>
+		<div id="div3_2">BAJEN</div>
+		<div id="div3_3">Solna AIK</div>
+		<h3>toggle</h3>
+		<p>Genom funktionen <code>toggle()</code> kan alternering mellan att gömma och visa ett element göras. I exemplet nedan försvinner cirkeln när knappen klickas på för att vid nästa klick visas igen.</p>
+		<div id="div4"></div>
+		<button id="div4btn">Klicka!</button>
+		<h3>hover</h3>
+		<p>Med funktionen <code>hover()</code> går det direkt att alternera mellan <code>mouseover</code> och <code>mouseout</code>. I exemplet nedan får cirkeln en färg när markören är över den och en annan när markören är utanför cirkeln</p>
+		<div id="div5"></div>
+		<h3>Tangentbordshändelser</h3>
+		<p>I exemplet nedan kan du prova att flytta cirkeln både i sidled och vertikalt genom att använda piltangenterna. Keydown används med keyCode för att identifiera att rätt tangent används vid önskad förflyttning. Dessutom exemplifierar utvinning av information genom att elementets ursprungliga position hämtar från css, genom <code>margin-left</code> samt <code>margin-top</code>. Det är i förhållande till detta hämtade värde som förflyttningen sedan sker genom omräkning av marginalerna.</p>
+		<div id="div6">BAJEN</div>
+		<h3>Dokument och fönsterhändelser</h3>
+		<p>Värdet i cirkeln ökar med 1 varje gång webbläsarens fönster maximeras eller minimeras. Prova! Funktionen som används är <code>resize()</code></p>
+		<div id="div7"><span id="div7span">0</span></div>
+		<h3>evt</h3>
+		<p>Likt exemplet ovan där cirkeln flyttas via piltangenterna, kan det ibland vara bra att kunna få fram vilken <code>keyCode</code> en specifik tangent har. Tryck på en tangent så visas dess <code>keyCode</code>.</p>
+		<p>Tangenten du har tryckt på har <code>keyCode</code>: <span id="whichSpan"></span></p>
+		<h3>Lägg till och ta bort klass-attribut</h3>
+		<p>Klicka på knapparna nedan för att lägga till eller ta bort ramen på cirkeln</p>
+		<div id="div8"></div>
+		<button id="div8AddBtn">Lägg till</button>
+		<button id="div8RemoveBtn">Ta bort</button>
+		<h3>preventDefault</h3>
+		<p>Länken nedan går inte att klicka på eftersom den hindras av preventDefault</p>
+		<input type="text" id="prevDefInp" value="">
+		<br>
+		<a href="http://www.hammarbyfotboll.se" target="_blank" id="prevDefLink">Bajen</a>
+		<h3>unbind</h3>
+		<p>Från början skiftar cikreln nedan färg när markören flyttas in över eller ut från den. När knappen har klickats på tas detta event bort via <code>unbind</code></p>
+		<div id="div9"></div>
+		<button id="unbindBtn">Stäng av!</button>
+		<footer>
+			<p>
+				Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a>
+			</p>
+		</footer>
+	</body>
+</html>

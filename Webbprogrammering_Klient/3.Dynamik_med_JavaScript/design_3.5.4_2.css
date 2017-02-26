@@ -1,0 +1,38 @@
+.toolTipDiv{
+	width: 90%; 
+	margin: 20px auto; 
+	overflow: hidden; 
+	height:500px;
+	background-color: lightgrey;
+	border: 5px solid black;
+	border-radius: 15px;
+	padding: 20px;
+	clear: both;
+}
+
+.tip{
+
+}
+
+a.tip{
+	color: black;
+	background-color: red;
+	text-decoration: none;
+	position: absolute;
+	padding: 5px 10px;
+	text-align: center;
+	border: 2px solid black;
+}
+
+.tooltip{
+	display: none;
+	position: absolute;
+	border: 2px solid red;
+	background-color: black;
+	color: white;
+	padding: 5px;
+	
+}
+
+
+

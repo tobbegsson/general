@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="design_3.5.2.css" rel="stylesheet" />
+		<script src="js_3.5.2.js"></script>
+		<title>
+			Uppgift 3.5.2 - Bildhantering
+		</title>
+		</head>
+	<body>
+		<header>
+			<h1>Uppgift 3.5.2 - Bildhantering</h1>
+		</header>
+		<h5>attr</h5>
+		<p>Klicka på bilden för att växla mellan den ursprungliga och en alternativ bild. Båda är inlagda i en array, från vilken de hämtas när de ska användas i syfte att hålla dem förladdade</p>
+		<div id="clickImgDiv"></div>
+		<h5>Rollover</h5>
+		<p>I detta fall räcker det att du för markören över bilden för att växla bild. När markörens förs utanför objektområdet byts bilden tillbaka igen</p>
+		<div id="rollDiv"></div>
+		<h5>canvas</h5>
+		<p>Använd knapparna för att rita ut de dynamiska objekten på canvasen. Klicka på rensa för att ta bort de objekt som visas.</p>
+		<button id="strLineBtn">Rak linje</button>
+		<button id="circleBtn">Cirkel</button>
+		<button id="curveBtn">Kurva</button>
+		<button id="bezBtn">Bezier-kurva</button>
+		<button id="colorBtn">Färgglad ruta</button>
+		<button id="textBtn">Text med transparens</button>
+		<button id="timeBtn">Tid med skuggning</button>
+		<button id="triBtn">Trianglar</button>
+		<button id="imgBtn"><img src="bajen_logo2.png" width="15" height="15" id="bajenImg" alt="Hammarby Logo" /></button>
+		<button id="imgsBtn"><img src="bajen_logo.jpg" width="15" height="15" id="bajenImgs" alt="Hammarby Logo" />^2</button>
+		<button id="clearBtn">Rensa</button>
+		<br>
+		<canvas id="canvasField"></canvas>
+		<br>
+		<a id="download">Ladda ner som fil</a>
+		<footer>
+			<p>
+				Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a>
+			</p>
+		</footer>
+	</body>
+</html>

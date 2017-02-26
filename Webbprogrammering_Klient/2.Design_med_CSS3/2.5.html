@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 2.5 - Navigering
+		</title>
+		<link rel="stylesheet" href="design.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.5 - Navigering</h1>
+			<nav>
+				<a href="index.html">Hem</a><br />
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>		
+		<h5>Länktillstånd</h5>
+		<p>Begreppet 'länktillstånd' handlar om att tilldela en länk egenskaper som avgör hur länken visas i olika stadier. Möjliga tillstånd är <code>a:link</code> vilket definierar elementets standardutseende, <code>a:active</code> definierar utseendet om länken klickas på och musknappen hålls nere, <code>a:visited</code> sätter utseendet om länken har klickats på tidigare och <code>a:hover</code> sätter utseendet när markören hålls över elementet. I nedan exempel finns en länk som från början är svart, blir grön när markören hålls över den, röd när den klickas på och blå när den har klickats på.</p>
+		<a href="http://www.hammarbyfotboll.se" id="linkstate">Hammarby IF Fotbolls webbsida</a>
+		<p>Egenskapen <code>cursor</code> används till att bestämma hur markören ska visas när det förs över ett element. Värdena finns i listan nedan, prova flytta markören över dem för att se hur markören visas över respektive:</p>
+		<ul>
+			<li id="auto"><code>auto</code></li>
+			<li id="crosshair"><code>crosshair</code></li>
+			<li id="default"><code>default</code></li>
+			<li id="eresize"><code>e-resize</code></li>
+			<li id="grab"><code>grab</code></li>
+			<li id="help"><code>help</code></li>
+			<li id="move"><code>move</code></li>
+			<li id="nresize"><code>n-resize</code></li>
+			<li id="neresize"><code>ne-resize</code></li>
+			<li id="nwresize"><code>nw-resize</code></li>
+			<li id="pointer"><code>pointer</code></li>
+			<li id="progress"><code>progress</code></li>
+			<li id="sresize"><code>s-resize</code></li>
+			<li id="seresize"><code>se-resize</code></li>
+			<li id="swresize"><code>swresize</code></li>
+			<li id="text"><code>text</code></li>
+			<li id="wresize"><code>w-resize</code></li>
+			<li id="wait"><code>wait</code></li>
+			<li id="notallowed"><code>not-allowed</code></li>
+			<li id="nodrop"><code>nodrop</code></li>
+		</ul>
+		<h5>Länk som knapp</h5>
+		<a href="http://www.hammarbyfotboll.se" class="linkbtn">Hammarby IF Fotboll</a>
+		<p>Det finns olika sätt att själv skapa en knapp som i sin helhet representerar en länk. Jag har valt att tilldela länken nedan en klasstillhörighet <code>linkbtn</code> för vilken jag kan sätta egenskaper som ger den dess utseende. Knappen nedan är av enklare slag, skapad genom färgsättning och ram.<br></p>
+		<h5>Länk med grafik</h5>
+		<a href="http://www.hammarbyfotboll.se" class="imglinkbtn"></a>					
+		<p>Det är också möjligt att använda en bild som länk. Viktigt är att tänka på att bilden inte ska upprepas (<code>no-repeat</code>) och bildens placering i elementet (<code>position</code>). Även i detta exempel gör jag så att länken tillhör en klass (<code>imglinkbtn</code>) som jag sedan formger:</p>
+		<h5>Vertikal navigationslista</h5>
+		<ul id="vertnavlist">
+			<li><a href="http://www.hammarbyfotboll.se" class="navblock">Hammarby</a></li>
+			<li><a href="http://www.tottenhamhotspur.com" class="navblock">Tottenham</a></li>
+			<li><a href="http://www.juventus.com/en/" class="navblock">Juventus</a></li>
+		</ul>
+		<p>För att åstadkomma denna vertikala navigationslista skapas en oordnad lista vilken jag via ID ger egenskaperna <code>list-style-type: none</code>, vilket innebär att det inte förekommer någon listelementsmarkör. <code>margin: 0</code> gör att det inte är något avstånd mellan listelementen och <code>padding: 0</code> gör att det inte förekommer något utrymme mellan ram och element.</p>
+		<h5>Horisontell navigationslista - "Sliding doors"</h5>
+		<div id="slidehead">
+			<ul id="slideul">
+				<li class="slideli"><a href="http://www.hammarbyfotboll.se" class="slideblock">Hammarby</a></li>
+				<li class="currentli"><a href="http://www.tottenhamhotspur.com" class="currentblock">Tottenham</a></li>
+				<li class="slideli"><a href="http://www.juventus.com/en/" class="slideblock">Juventus</a></li>
+			</ul>
+		</div>
+		<p>Till en navigationslista av typen sliding doors behövs bilder, vilka i detta fall har lånats från http://alistapart.com/article/slidingdoors. Detta gäller även till stor del den kod som jag använt i uppgiften. Den oordnade listan skapas på samma sätt som den föregående vertikala listan. För att åstadkomma fungerande Sliding doors endast med CSS behövs ett eget CSS-dokument för varje sida, endast för att styra vilken flik som är aktiv för tillfället. Senare går detta istället att lösa via Java-Script. Jag har därför valt att nedan exemplifiera hur Sliding doors visuellt kan se ut. 
+		Följande element har skapats och har följande CSS-egenskaper:</p>
+		<dl>
+			<dt><code>div id="slidehead"</code> - Används som utrymme att placera menyn i. Flytande til vänster med bredden 100% av fönstret. En bakgrundsbild upprepas horisontellt med nedre placering. Text är något mindre än normalt.</dt>
+			<dd>
+				<pre>
+					div#slidehead{
+						float: left;
+						width: 100%;
+						background-image: url("bg.gif");
+						background-repeat: repeat-x;
+						background-position: bottom;
+						font-size: 93%;
+						line-height: normal;
+					}
+				</pre>
+			</dd>
+			<dt><code>ul id="slideul"</code> - Representerar själva listan. Listelementmarkörer är borttagna, precis som mellanrummet mellan elementen. Extra utrymme mellan kant och elementtext är tillagd</dt>
+			<dd>
+				<pre>
+					ul#slideul{
+						list-style: none;
+						margin: 0;
+						padding: 10px 10px;
+					}
+				</pre>
+			</dd>
+			<dt><code>li class="slideli"</code> - Representerar de generella listelementen</dt>
+			<dd>
+				<pre>
+					ul#slideul{
+						list-style: none;
+						margin: 0;
+						padding: 10px 10px;
+					}
+				</pre>
+			</dd>
+		</dl>				
+		<footer>
+			Copyright: Tobias Gunnarsson, 2015
+		</footer>
+	</body>
+</html>

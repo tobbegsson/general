@@ -1,0 +1,621 @@
+body {
+	//background-color: grey;
+	font-family: sans-serif;
+	background-image: url(bajenlogo.gif), url(bajenlogo.gif);
+	background-repeat: no-repeat, no-repeat;
+	background-attachment: fixed, scroll;
+	background-position: left top, right top;
+}
+
+header {
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: monospace;
+}
+
+footer {
+	color: grey;
+	font-family: monospace;
+}
+
+a {
+	color: black;
+	font-family: monospace;
+}
+h3 {
+	text-transform: uppercase;
+}
+
+dd#serifed {
+	font-family: serif;
+}
+dd#sans-serifed{
+	font-family: sans-serif;
+}
+dd#monospaced{
+	font-family: monospace;
+}
+p#hexcolor {
+	color: #ff0000;
+}
+p#rgbcolor {
+	color: rgb(255,0,0);
+}
+p#serif {
+	font-family: serif;
+}
+p#sansserif {
+	font-family: sans-serif;
+}
+p#mono {
+	font-family: monospace;
+}
+p#fontsize {
+	font-size: 150%;
+}
+div#fontadjust1serif{
+	font-family: serif;
+	font-size-adjust: 0.58;
+}
+div#fontadjust1sans{
+	font-family: sans-serif;
+	font-size-adjust: 0.58;
+}
+div#nofontadjust2serif{
+	font-family: serif;
+}
+div#nofontadjust2sans{
+	font-family: sans-serif;
+}
+div#normfont{
+	font-style: normal;
+}
+div#itafont{
+	font-style: italic;
+}
+div#oblfont{
+	font-style: oblique;
+}
+div#fontvariant{
+	font-variant: small-caps;
+}
+div#boldfont{
+	font-weight: bold;
+}
+div#bolderfont{
+	font-weight: bolder;
+}
+div#lighterfont{
+	font-weight: lighter;
+}
+div#exspace{
+	letter-spacing: 2px;
+}
+div#lesspace{
+	letter-spacing: -3px;
+}
+div#exwspace{
+	word-spacing: 2px;
+}
+div#leswspace{
+	word-spacing: -3px;
+}
+p#leslinespace{
+	line-height: 50%;
+}
+p#exlinespace{
+	line-height: 200%;
+}
+p#toleft{
+	text-align: left;
+}
+p#tocenter{
+	text-align: center;
+}
+p#toright{
+	text-align: right;
+}
+p#decounder{
+	text-decoration: underline;
+}
+p#decoover{
+	text-decoration: overline;
+}
+p#decothrough{
+	text-decoration: line-through;
+}
+h1#textshadow{
+	text-shadow: 3px 3px #00FF00;
+}
+p#textindent{
+	text-indent: 50px;
+}
+dd#upcase{
+	text-transform: uppercase;
+}
+dd#lowcase{
+	text-transform: lowercase;
+}
+dd#capitcase{
+	text-transform: capitalize;
+}
+p#nowrap{
+	white-space: nowrap;
+}
+p#pre{
+	white-space: pre;
+}
+p#preline{
+	white-space: pre-line;
+}
+p#prewrap{
+	white-space: pre-wrap;
+}
+p#firstlinep:first-line{
+	background-color: #00FF00;
+}
+p#firstletterp:first-letter{
+	background-color: #00FF00;
+}
+ul#bajenlist{
+	list-style-image: url('bajenlogo.gif');
+}
+ul#bajenlist2{
+	list-style-image: url('bajenlogo.gif');
+	list-style-position: inside;
+}
+ul#squarelist{
+	list-style-type: square;
+}
+ul#nonelist{
+	list-style-type: none;
+}
+div#margtop{
+	margin-top: 20px;
+}
+div#margbottom{
+	margin-bottom: 30px;
+}
+div#margleft{
+	margin-left: 40px;
+}
+div#margright{
+	margin-right: 5000px;
+}
+p#pdefborder{
+	border: solid;
+}
+p#pmixborder{
+	border-top: solid;
+	border-bottom: double;
+	border-left: dotted;
+	border-right: dashed;
+}
+p#pcolorborder{
+	border: solid;
+	border-top-color: red;
+	border-right-color: yellow;
+	border-bottom-color: green;
+	border-left-color: blue;
+}
+p#pmixborderred{
+	border: solid;
+	border-bottom: dotted red;
+}
+p#pbordstyle{
+	border-style: solid double;
+}
+p#pmixwidth{
+	border: solid thin;
+	border-bottom-width: thick;
+}
+p#paddedp{
+	border: solid;
+	padding: 5px 10px;
+}p#outlinedp{
+	border: solid;
+	padding: 5px 10px;
+	outline: #FF0000 dotted thick;
+}
+div#divhidden{
+	visibility: hidden;
+}
+div#clipbox{
+	background-color: green;
+	width: 100px;
+}
+div#clipbox2{
+	position: absolute;
+	background-color: green;
+	width: 100px;
+	clip: rect(0px,50px,50px,0px);
+}
+p#dispnormal{
+	width: 200px;
+	background-color: grey;
+}
+p#dispwrong{
+	width: 200px;
+	display: inline;
+	background-color: grey;
+}
+span#dispspan1{
+	font-style: italic;
+}
+span#dispspan2{
+	font-style: italic;
+	display: block;
+}
+p#ofvisib{
+	width: 100px;
+	height: 100px;
+	background-color: grey;
+}
+p#ofhidden{
+	width: 100px;
+	height: 100px;
+	background-color: grey;
+	overflow: hidden;
+}
+p#ofscroll{
+	width: 100px;
+	height: 100px;
+	background-color: grey;
+	overflow: scroll;
+}
+img#opacityimg{
+	opacity: 0.5;
+}
+img#framedimg{
+	border: solid;
+	border-color: green;
+}
+img#roundedimg{
+	border: solid;
+	border-color: green;
+	border-radius: 10px;
+}
+p#multibckgr{
+	width: 400px;
+	height: 200px;
+	border: solid;
+	border-color: green;
+	background-image: url(background2.gif), url(background1.gif);
+	background-position: center bottom, left top;
+	background-repeat: no-repeat;
+}
+img#shadowedimg{
+	border: solid;
+	border-color: green;
+	border-radius: 10px;
+	box-shadow: 5px 5px; 
+}
+p#gradient1{
+	border: solid;
+	background: linear-gradient(to right, white, green);
+	width: 400px;
+	height: 200px;
+}
+p#gradient2{
+	border: solid;
+	background: repeating-linear-gradient(to right, green, white 20%, green 20%);
+	width: 400px;
+	height: 200px;
+}
+p#gradient3{
+	border: solid;
+	background: radial-gradient(green, white, green, white);
+	width: 400px;
+	height: 200px;
+}
+p#attachp{
+	border: solid;
+	background-image: url(bajenlogo.gif);
+	width: 100px;
+	height: 100px;
+	background-repeat:no-repeat;
+	overflow: auto;
+}
+p#attachp2{
+	border: solid;
+	background-image: url(bajenlogo.gif);
+	width: 100px;
+	height: 100px;
+	background-repeat:no-repeat;
+	overflow: auto;
+	background-attachment: fixed;
+	background-position: left top;
+}
+h1#hexh1{
+	background-color: #FF0000;
+}
+ul#imgul{
+	width: 300px;
+	height: 300px;
+	background-image: url(bajenlogo.gif);
+}
+div#imgposdiv{
+	width: 300px;
+	height: 300px;
+	background-image: url(bajenlogo.gif), url(bajenlogo.gif),url(bajenlogo.gif);
+	background-position: left top, center center, right bottom;
+	background-repeat: no-repeat;
+	border: solid;
+	border-color: gold;
+}
+p#repeatxp{
+	width: 200px;
+	height: 200px;
+	background-image: url(bajenlogo.gif);
+	background-repeat: repeat-x;
+	background-position: center center;
+	border: solid;
+}
+p#repeatyp{
+	width: 200px;
+	height: 200px;
+	background-image: url(bajenlogo.gif);
+	background-repeat: repeat-y;
+	background-position: center center;
+	border: solid;
+}
+p#floatimgp1{
+	width: 200px;
+	height: 200px;
+	border: solid;	
+}
+img#floatimg1{
+	float: left;	
+}
+article#floatimgarticle2{
+	width: 400px;
+	height: 200px;
+	border: solid;	
+}
+img#floatimg2{
+	float: right;	
+}
+.clearedboth{
+	clear: both;
+}
+a:link#linkstate{
+	color: black;
+	font-weight: bold;
+}
+a:visited#linkstate{
+	color: blue;
+	font-weight: bold;
+}
+a:hover#linkstate{
+	color: green;
+	font-weight: bold;
+}
+a:active#linkstate{
+	color: red;
+	font-weight: bold;
+}
+li#auto{
+	cursor: auto;
+}
+li#crosshair{
+	cursor: crosshair;
+}
+li#eresize{
+	cursor: e-resize;
+}
+li#grab{
+	cursor: grab;
+}
+li#help{
+	cursor: help;
+}
+li#move{
+	cursor: move;
+}
+li#nresize{
+	cursor: n-resize;
+}
+li#neresize{
+	cursor: ne-resize;
+}
+li#nwresize{
+	cursor: nw-resize;
+}
+li#pointer{
+	cursor: pointer;
+}
+li#progress{
+	cursor: progress;
+}
+li#sresize{
+	cursor: s-resize;
+}
+li#seresize{
+	cursor: se-resize;
+}
+li#swresize{
+	cursor: sw-resize;
+}
+li#text{
+	cursor: text;
+}
+li#wresize{
+	cursor: w-resize;
+}
+li#wait{
+	cursor: wait;
+}
+li#notallowed{
+	cursor: not-allowed;
+}
+li#nodrop{
+	cursor: no-drop;
+}
+a.linkbtn{
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	border: 2px solid;
+	border-color: gold;
+	padding: 10px;
+	border-radius: 10px;
+	clear: both;
+}
+a.linkbtn:visited{
+	background-color: red;
+}
+a.linkbtn:hover{
+	background-color: grey;
+}
+a.linkbtn:active{
+	background-color: pink;
+}
+a.imglinkbtn{
+	background-image: url(bajenlogo.gif);
+	background-repeat: no-repeat;
+	background-position: center center;	
+	padding: 40px;
+	box-shadow: 4px 4px;
+	border: 2px solid;
+	border-color: gold;
+	float: right;
+	clear: both;
+}
+a.imglinkbtn:visited{
+	border-color: green;
+}	
+a.imglinkbtn:hover{
+	border-width: 5px;
+}
+a.imglinkbtn:active{
+	border-color: red;
+}
+ul#vertnavlist{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+a.navblock{
+	display: block;
+	width: 100px;
+	border: 1px solid;
+	border-color: gold;
+	background-color: grey;
+	color: white;
+}
+a.navblock:visited{
+	background-color: green;
+}
+a.navblock:hover{
+	background-color: white;
+	color: black;
+}
+a.navblock:active{
+	border: 3px solid;
+}
+div#slidehead{
+	float: left;
+	width: 100%;
+	background-image: url("bg.gif");
+	background-repeat: repeat-x;
+	background-position: bottom;
+	font-size: 93%;
+	line-height: normal;
+}
+ul#slideul{
+	list-style: none;
+	margin: 0;
+	padding: 10px 10px;
+}
+li.slideli{
+	float: left;
+	background-image: url("norm_right.gif");
+	background-repeat: no-repeat;
+	background-position: right top;
+	margin: 0;
+	padding: 0;
+}
+a.slideblock{
+	display: block;
+	background-image: url("norm_left.gif");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding: 5px 15px 4px;
+}
+li.currentli{
+	float: left;
+	background-image: url("norm_right_on.gif");
+	background-repeat: no-repeat;
+	background-position: right top;
+	margin: 0;
+	padding: 0;
+}
+a.currentblock{
+	display: block;
+	background-image: url("norm_left_on.gif");
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding: 5px 15px 5px;
+}
+table#autotab{
+	width: 50%;
+	table-layout: auto;
+	border-style: solid;
+	clear: both;
+}
+table#fixedtab{
+	width: 50%;
+	table-layout: fixed;
+	border-style: solid;
+	clear: both;	
+}
+td{
+	border-style: solid;
+	border-width: thin;
+}
+th{
+	border-style: solid;
+	border-width: thin;	
+}
+table#collapsedtab{
+	width: 50%;
+	table-layout: fixed;
+	border-style: solid;
+	clear: both;
+	border-collapse: collapse;
+}
+table#spacedtab{
+	width: 50%;
+	table-layout: fixed;
+	border-style: solid;
+	clear: both;
+	border-collapse: separate;
+	border-spacing: 10px 10px;
+}
+table#captiontab{
+	width: 50%;
+	table-layout: fixed;
+	border-style: solid;
+	clear: both;
+	border-collapse: collapse;
+	caption-side: bottom;
+}
+table#emptytab{
+	width: 50%;
+	table-layout: fixed;
+	border-style: solid;
+	clear: both;
+	empty-cells: hide;
+}
+table#noemptytab{
+	width: 50%;
+	table-layout: fixed;
+	border-style: solid;
+	clear: both;
+}
+caption{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: grey;
+}

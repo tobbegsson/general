@@ -1,0 +1,33 @@
+ul.panelTabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+ul.panelTabs li{
+	background-color: lightgrey;
+	color: black;
+	display: inline-block;
+	padding: 10px 10px;
+	cursor: pointer;
+}
+
+ul.panelTabs li.current{
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+}
+
+.tabcont{
+	display: none;
+	background-color: white;
+	border: 5px solid black;
+	padding: 15px;
+}
+
+.tabcont.current{
+	display: inherit;
+	color: black;
+}
+
+

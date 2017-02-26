@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>Uppgift 1.4 - Formulär</title>
+	</head>
+	<body>
+		<h1>Uppgift 1.4 - Formulär</h1>
+		<form action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi" method="get">
+			<fieldset>
+				<legend>Uppgifter</legend>
+				<label>Namn</label>
+				<br>
+				<input type="text" name="name" placeholder="Namn" pattern="[A-Za-z].{5,}"/>
+				<br>
+				<label>E-post</label>
+				<br>
+				<input type="email" name="email" placeholder="namn@domän.com" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required />
+				<br>
+				<label>Lösenord</label>
+				<br>
+				<input type="password" name="password" placeholder="Lösenord" required />
+				<br>
+				Krypteringsnivå<br>
+				<keygen name="security">
+				<br>
+				<label>Egen webbsida</label>
+				<br>
+				<input type="url" name="url" placeholder="Ex: www.dsv.su.se" pattern="http?://.+" title="Include http://"/>
+				<br>
+				<label>Övrig information</label>
+				<br>
+				<textarea name="otherarea" placeholder="Något annat som du anser kan vara bra för oss att veta?" cols="50" rows="5"></textarea>
+				<br>
+			</fieldset>
+			<fieldset>
+				<legend>Bibelkunskap</legend>
+				Hur mycket ur bibeln kan du återge ordagrant?<br>
+				<input type="radio" name="bible" value="mini" />Inget 
+				<input type="radio" name="bible" value="medium" />Lite 
+				<input type="radio" name="bible" value="medmax" />Lagom 
+				<input type="radio" name="bible" value="maxi" />Mycket<br>
+			</fieldset>
+			<fieldset>
+				<legend>Favoritplagg</legend>
+				Vilket eller vilka plagg bär du gärna?<br>
+				<input type="checkbox" name="plagg" value="skjorta" />Skjorta 
+				<input type="checkbox" name="plagg" value="tshirt" />T-shirt 
+				<input type="checkbox" name="plagg" value="hoodie" />Hoodie 
+				<input type="checkbox" name="plagg" value="jeans" />Jeans 
+				<input type="checkbox" name="plagg" value="chinos" />Chinos<br>
+			</fieldset>
+			<fieldset>
+				<legend>Kuriosa</legend>
+				Vilket eller vilka är dina favoritlag i respektive land?<br>
+				<select name="favteam" multiple="multiple" size="8">
+					<optgroup label="Sverige">
+						<option value="1">Solna AIK
+						<option value="2">Djurgårdens IF
+						<option value="3">Hammarby IF
+					</optgroup>
+					<optgroup label="England">
+						<option value="4">Arsenal
+						<option value="5">Chelsea
+						<option value="6">Tottenham
+					</optgroup>
+				</select>
+				<br>
+				<datalist id="favtopic">
+					<option value="Matematik">Matte</option>
+					<option value="Språk">Främmande språk</option>
+					<option value="Historia">Historiska händelser</option>
+					<option value="Religion">Religionsvetenskap</option>
+					<option value="Bild">Rita, måla, skulptera</option>
+				</datalist>
+				Välj ditt favoritämne från grundskolan i listan<br>
+				<input type="text" name="topic" list="favtopic">
+				<br>
+				Hur lång är du?<br>
+				<input type="number" name="height" min="0" max="200" step="5" placeholder="Ange i cm">cm<br>
+				Och hur mycket vägen du?<br>
+				0<input type="range" name="weight" min="0" max="150" step="5">150 kg<br>
+				Vilken månad och år är du född?<br>
+				<input type="month" name="month" /><br>
+				Vilken vecka och år är du född?<br>
+				<input type="week" name="week" /><br>
+				Hur mycket är klockan just nu?<br>
+				<input type="time" name="time" /><br>
+			</fieldset>
+			<input type="submit" value="Skicka">
+			<input type="image" alt="IMG">
+			<input type="button" value="Klicka">
+			<input type="reset" value="Återställ">
+		</form>
+		<form action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi" method="post" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Profilbild</legend>
+				Välj bild: <input type="file" name="file" id="bild" multiple>
+				<br>
+			</fieldset>
+			<input type="submit" id="sparaBild" value="Spara profilbild" />
+		</form>
+	</body>
+</html>

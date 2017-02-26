@@ -1,0 +1,16 @@
+.slideDiv img {
+	border: 0px;
+	width: 400px;
+	height: 400px;
+	display: none;
+}
+
+.slideDiv {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	margin: 30px auto;
+	background-color: white;
+	border: 5px solid green;
+}
+

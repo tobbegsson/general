@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 2.6 - Tabeller och formulär
+		</title>
+		<link rel="stylesheet" href="design.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.6 - Tabeller och formulär</h1>
+			<nav>
+				<a href="index.html">Hem</a><br />
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>		
+		<h5><code>table-layout</code></h5>
+		<p>Med egenskapen kan värdena <code>auto</code> (standardvärde) eller <code>fixed</code> anges. Det första alternativet gör att kolumnbredden sätts bestäms av det bredaste av cellinnehållen i tabellen. Nackdelen är att det kan ta längre tid att ladda en sådan tabell, då allt innehåll kan behöva kontrolleras för att veta vilken cell som innehåller det största innehållet innan tabllen kan börja ritas ut. Med det andra alternativet sätter man själv genom att ange bredd och höjd. Kan laddas snabbare då tabellen kan börja ritas ut redan vid första raden. Varje kolumn blir lika stor Nedan exempel på tabeller med respektive värde.</p>
+		<table id="autotab">
+			<caption>--- Bokstäver och siffror med auto ---</caption>
+			<tr>
+				<th>Bokstäver</th>
+				<th>Siffor</th>
+			</tr>
+			<tr>
+				<td>a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö</td>
+				<td>0 1 2 3 4 5 6 7 8 9</td>
+			</tr>
+		</table>
+		<table id="fixedtab">
+			<caption>--- Bokstäver och siffror med fixed ---</caption>
+			<tr>
+				<th>Bokstäver</th>
+				<th>Siffor</th>
+			</tr>
+			<tr>
+				<td>a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö</td>
+				<td>0 1 2 3 4 5 6 7 8 9</td>
+			</tr>
+		</table>
+		<p>Så som syns i <code>auto</code>-tabellen ovan blir kolumnen med bokstäver större eftersom cellen innehåller fler tecken och därmed tar större plats. Den andra tabellen, <code>fixed</code>-tabellen, är kolumnerna istället lika stora. Följden blir att alla bokstäver inte får plats på en och samma rad varpå en automatisk radbrytning sker.</p> 
+		<h5><code>border-collapse</code></h5>
+		<p>Egenskapen gör det möjligt att styra hur mellanrummet mellan tabellcellerna ska visas. Standardvärdet är <code>separate</code> vars utseende går att se i tabellerna här ovan. Med detta följer också möjligheten att ha större eller mindre avstånd mellan cellerna. Alternativet är <code>collapse</code>, vilket tar bort mellanrummet mellan cellerna, istället delar cellerna kantlinjer. Se exempel nedan och jämför med tidigare tabeller.</p>
+		<table id="collapsedtab">
+			<caption> ---Bokstäver och siffror med fixed och collapse ---</caption>
+			<tr>
+				<th>Bokstäver</th>
+				<th>Siffor</th>
+			</tr>
+			<tr>
+				<td>a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö</td>
+				<td>0 1 2 3 4 5 6 7 8 9</td>
+			</tr>
+		</table>
+		<h5><code>border-spacing</code></h5>
+		<p>Detta är egenskapen som ger möjlighet till att bestämma hur stort mellanrummet mellan cellerna ska vara, när tabellen är enligt <code>border-collapse: separate</code>. Värdet anges med pixlar, antingen ett värde om det ska vara samma avstånd på alla sidor eller med två värden för uppe/nere respektive höger/vänster. Tabellen nedan är enligt <code>border-spacing: 10px 10px</code>, jämför med de första tabellerna som också är <code>border-collapse: separate</code>.</p>
+		<table id="spacedtab">
+			<caption>--- Bokstäver och siffror med fixed och border-spacing ---</caption>
+			<tr>
+				<th>Bokstäver</th>
+				<th>Siffor</th>
+			</tr>
+			<tr>
+				<td>a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö</td>
+				<td>0 1 2 3 4 5 6 7 8 9</td>
+			</tr>
+		</table>
+		<h5><code>caption-side</code></h5>
+		<p>Egenskapen möjliggör att bestämma var tabellrubriken ska placeras. Möjliga värden är <code>top</code> (standard) eller <code>bottom</code>. Exemplet nedan är enligt <code>caption-side: bottom</code>, jämför med övriga tabeller som är enligt standard.</p>
+		<table id="captiontab">
+			<caption>--- Bokstäver och siffror med rubrik under ---</caption>
+			<tr>
+				<th>Bokstäver</th>
+				<th>Siffor</th>
+			</tr>
+			<tr>
+				<td>a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö</td>
+				<td>0 1 2 3 4 5 6 7 8 9</td>
+			</tr>
+		</table>
+		<h5><code>empty-cells</code></h5>
+		<p>Egenskapen möjliggör att bestämma om en tom cells kantlinje ska visas eller inte. Förutsätter att tabellen är enligt <code>border-collapse: separate</code>. Se exempeltabeller nedan för skillnad mellan standardvärdet <code>show</code> och alternativa värdet <code>hide</code>.</p>
+		<table id="noemptytab">
+			<caption>--- Bokstäver och siffror med show/auto ---</caption>
+			<tr>
+				<th>Bokstäver</th>
+				<th>Siffor</th>
+			</tr>
+			<tr>
+				<td>a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö</td>
+				<td>0 1 2 3 4 5 6 7 8 9</td>
+			</tr>
+			<tr>
+				<td>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Å Ä Ö</td>
+				<td></td>
+			</tr>
+		</table>
+		<table id="emptytab">
+			<caption>--- Bokstäver och siffror med hide ---</caption>
+			<tr>
+				<th>Bokstäver</th>
+				<th>Siffor</th>
+			</tr>
+			<tr>
+				<td>a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö</td>
+				<td>0 1 2 3 4 5 6 7 8 9</td>
+			</tr>
+			<tr>
+				<td>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Å Ä Ö</td>
+				<td></td>
+			</tr>
+		</table>
+		<footer>
+			Copyright: Tobias Gunnarsson, 2015
+		</footer>
+	</body>
+</html>

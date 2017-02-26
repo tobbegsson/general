@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 3.1 - Grunderna i JavaScript
+		</title>
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 3.1 - Grunderna i JavaScript</h1>
+		</header>
+		<h3>Externt länkad JavaScript-fil och dess fördelar</h3>
+		<p>Fördelen med att hantera JavaScript via en externt länkad fil är att funktioner som används av flera webbsidor endast behöver skrivas (och eventuellt ändras) på ett ställe istället för i varje sida där den används. Fördelen är direkt jämförbar med användandet av externt länkade CSS-filer för att hantera multipla sidors utseende via ett enda dokument istället för i varje webbsidas dokumentation. För att påtala för webbläsaren att det finns en externt länkad JavaScript-fil att använda skrivs följande i <code>&lt;head></code>-delen: <code>&lt;script src="filnamn.js>&lt;/script></code>. Filformatet som JavaScript-filen sparas i är alltså <code>.js</code>.</p>
+		<h3>Satser</h3>
+		<p>Satser är ett kodavsnitt som syftar till att utföra ett specifikt arbete. En sats kan vara allt från en kort sats som tilldelar en variabel ett värde till en mer omfattande loop-sats där flera möjliga alternativ ska gås igenom för att slutligen utföra arbetet på korrekt sätt.</p>
+		<h3>Datatyper</h3>
+		<p>Till skillnad från många andra programmeringsspråk sätts inte en specifik datatyp i JavaScript. Istället deklareras variabeln som en <code>var</code>, vilket står för variable.</p>
+		<h3>Variabler och arrayer</h3>
+		<p>Som tidigare nämnts kan en variabel (<code>var</code>) innehålla olika datatyper. Syftet med variabeln är dock just att hålla ett tilldelat värde, till exempel <code>var x = 5;</code> vilket innebär att variabeln x innehåller ett data med värdet 5.</p>
+		<p>Array är en variabel som kan innehålla flera data och dess respektive värden. Varje hållare i arrayen har ett index där den första har <code>index = 0</code>. I en array med färger skulle det kunna se ut enligt följande: <code>var colors = [Blå, Grön, Röd, Gul];</code> där data med värdet Blå hamnar på index 0, Grön på index 1 osv osv. I en array kan flera olika typer av variabler så länge de är object. </p>
+		<h3>Operatorer och stränghantering</h3>
+		<p>Det finns tre katergorier av operatorer; Aritmetiska, Tilldelnings- samt Jämförelseoperatorer.</p>
+		<h5>Aritmetiska operatorer</h5>
+		<p>Dessa operatorer liknar de olika räknesätten inom matematiken - addition, subtraktion, multiplikation och division (<code>+, -, *</code> respektive <code>/</code>). Modulos (<code>%</code>) är en annan aritmatisk operator som tar fram resten av ett tal när det är dividerat med ett annat heltal. Utöver dessa finns också sammansatta operatorer i form av <code>++</code> som ökar värdet med 1 och <code>--</code> som minskar värdet med 1.</p>
+		<h5>Tilldelningsoperatorer</h5>
+		<p>Tilldelningsoperatorer utgår från <code>=</code> vilket också kan sättas samman med de icke sammansatta aritmetiska operatorerna. Satsen <code>y = 3;</code> tilldelar variabeln y värdet 3. Om sedan satsen <code>y += 2</code> används kommer värdet två adderas till tidigare y-värdet. På samma sätt går det också att använda <code>-=, *=, /=</code> samt <code>%=</code>.</p>
+		<h5>Jämförelseoperatorer</h5>
+		<p>Så som namnet ger en ledtråd om används dessa operatorer till att jämföra två variablers värden med varandra. Dessa operatorer är:</p>
+		<dl>
+			<dt>==</dt>
+			<dd>Lika</dd>
+			<dt>===</dt>
+			<dd>Lika och av samma typ</dd>
+			<dt>!=</dt>
+			<dd>Inte lika</dd>
+			<dt>!==</dt>
+			<dd>Varken lika eller av samma typ</dd>
+			<dt>&lt;</dt>
+			<dd>Mindre än</dd>
+			<dt>=&lt;</dt>
+			<dd>Mindre än eller lika</dd>
+			<dt>></dt>
+			<dd>Störra än</dd>
+			<dt>=></dt>
+			<dd>Större eller lika</dd>
+		</dl>
+		<p>Operatorn <code>+</code> kan också användas till att sätta samman textsträngar. Består varje variabel av ett ord och mellanslag önskas mellan orden måste detta läggas till som ett blanksteg inom citattecken (<code>" "</code>). Dessa citattecken används också runt ord och meningar för att påvisa att det är just en textsträng och inget annat. När det kommer till strängar är det också av intresse att veta att dessa fungerar som en array. Skapas en sträng med placeras dessa i en array på index 0, 1, 2 och 3.</p>
+		<p>
+		<h3>Flödeshantering (if-satser och loopar)</h3>
+		<p>Flödeshantering genom <code>if</code>-satser eller loopar används till att få arbeten att köras till exempel ett visst antal gånger eller så länge vissa specificerade kriterier är uppfyllda.</p>
+		<h5><code>if</code>-sats</h5>
+		<p>Enkelt uttryckt kan en <code>if</code>-sats beskrivas som en sats som ska kontrollera huruvida ett påstående är sant eller falskt. Kravet är att påståendet ska kunna vara sant (true) eller falskt (false). Påståendet skrivs inom paranteser följt av satsens kropp inom "måsvingar" ({}). Koden som finns i kroppen körs endast om påstående är sant. Se exempel nedan:</p>
+		<pre>
+			<code>
+				var y = 5;
+				var z = 10;
+				if(y => 0){
+					y += z;
+				}
+			</code>
+		</pre>
+		<p>Satsen får med sig värdet y = 5. I <code>if</code>-satsen kontrolleras sedan huruvida y är större eller likamed 0. Om så är fallet adderas värdet i z (10) till värdet i y.</p>
+		<h5><code>while</code>-loop</h5>
+		<p>I en <code>while</code>-loop påminner i utförande om en <code>if</code>-sats men används istället till att upprepa sats så länge satta kriterier gäller. Exempel:</p>
+		<pre>
+			<code>
+				var y = 10;
+				var z = 1;
+				while(y > 0){
+					y -= &lt;;
+				}
+			</code>
+		</pre>
+		<p>Y har från början värdet 10. Kriteriet i loopen är att den ska göras så länge variabeln y har ett värde som är större än 0. Så länge detta uppfylls kommer satsen i kroppen köras, vilket innebär att värdet i variablen y minskas med värdet i variabeln z (1). Efter första varvet kommer alltså y = 9, efter varv två är y = 8 osv osv.</p>
+		<h5><code>for</code>-loop</h5>
+		<p>I en <code>for</code>-loop kan antalet varv som loopen ska köras anges.</p>
+		<pre>
+			<code>
+				var x = "Hammarby";
+				for(var i = 0; i &lt; x.length(); i++){
+					document.write(x[i] + " ");
+				}
+			</code>
+		</pre>
+		<p>I koden ovan skapas en variabel med en sträng. Så som beskrivits tidigare fungerar strängar som en array, varför dess index går att använda. I loopen deklareras heltalsvariabeln i till 0. Efter detta anges hur länge loopen ska fortsätta (eg. när den ska avbrytas) vilket är så länge i är mindre än arrayen som håller strängens längd genom funktionen <code>.length()</code> (mer om funktioner senare). Slutligen Anges vad som ska göras efter att varvet i loopen har slutförts, vilket är att värdet i variabeln i ska ökas med 1. Strängen kräver åtta platser i arrayen (0-7), vilket innebär att kriteriet är uppfyllt och koden i kroppen körs i form av att gå in i arrayen på det index som variabeln i har i värde för tillfället. I detta fall är det den första platsen (index 0) varför "H" skrivs ut följt av ett blanksteg. När detta skett ökas i med 1 och ett en ny kontroll sker i loopen huruvida kriteriet uppfylls. När hela strängen har skrivits ut kommer i ökas till 8 varför kriteriet inte längre uppfylls och loopen avbryts.</p>
+		<h3>Funktioner</h3>
+		<p>Funktioner i JavaScript kan jämföras med metoder i Java-programmering. Dessa är lämpliga att använda när ett specifikt kodavsnitt används på många ställen. Genom att bryta ut detta till en funktion behöver detta endast skrivas en gång och sedan anropas där den behövs. Deklarationen av en funktion görs enligt följande syntax:</p>
+		<pre>
+			<code>
+				function funcy(){
+					document.write("Tjenare!")
+				}
+			</code>
+		</pre>
+		<p>Funktionen namn sätts till <code>funcy</code> följt av två parenteser som indikerar att det är just en funktion. I kroppen anges sedan vad som ska ske när funktionen anropas. Tidigare visades exempel på en fördefinierad funktion i form av <code>lenght()</code>. Dessa är alltså fördefinierade i JavaScript och kan så användas.</p>
+		<h3>Reguljära uttryck</h3>
+		<p>Reguljära uttryck är objekt som kan användas till att hitta mönster (pattern) i textsträngar, till exempel i syfte att söka i text och byta ut text. Syntax för detta är enligt nedan:</p>
+		<pre>
+			<code>
+				var z = "Ett två tre fyra, ett två tre fyra. Ett två tre fyra fem sex"
+				var thePattern = /två/ig;
+				var y = text.match(thePattern);
+			</code>
+		</pre>
+		<p>Variabeln thePattern är den som avgörs hur det reguljära uttrycket ska köras. Först och främst börjar det med ett <code>/</code> följt av det som ska eftersökas, i detta fall "två". Sedan följer ytterligare ett <code>/</code> innan något eller några av följande modifierar kan användas:</p>
+		<dl>
+			<dt>i</dt>
+			<dd>Sökningen förbiser huruvida det är en gemen eller en versal den läser.</dd>
+			<dt>g</dt>
+			<dd>G står för global, vilket innebär att fortsätter söka även efter att den första träffen gjorts. Utan <code>g</code> skulle sökningen stanna redan vid första träffen.</dd>
+			<dt>m</dt>
+			<dd>Med denna modifierare söker matchning på varje rad</dd>
+		</dl>	
+		<p>I exemplet ovan skulle tre matchningar av "två" göras eftersom g finns med som modifierare. Modifieraren i spelar ingen roll i detta fall eftersom alla möjliga matchningar är skrivna med gemener, men hade vi sökt efter "ett" utan modifieraren i hade endast en träff gjorts eftersom två av tre potentiella matchningar är skrivna med stor begynnelsebokstav.</p>
+		<footer>
+			<p>
+				Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a>
+			</p>
+		</footer>
+	</body>
+</html>

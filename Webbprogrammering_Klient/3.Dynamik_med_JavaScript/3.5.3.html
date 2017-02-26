@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="design_3.5.3.css" rel="stylesheet" />
+		<script src="js_3.5.3.js"></script>
+		<title>
+			Uppgift 3.5.3 - Navigering
+		</title>
+		</head>
+	<body>
+		<header>
+			<h1>Uppgift 3.5.3 - Navigering</h1>
+		</header>
+		<h3>Alternativ 1</h3>
+		<p>I detta alternativ har dropdownmenyerna byggts upp genom navigationsobjekt (<code>div</code>) innehållande en oordnad lista. Denna innehåller i sin tur tre listobjekt vilka innehåller menyrubrikerna i form av hyperlänk samt ännu en oordnad lista med med listobjekt i form av hyperlänkar. Den sistnämnda listan är det nedfallande området när huvudrubriken hovras över.</p>
+		<div id="menuCont">
+			<div id="menuDiv">
+				<nav>
+					<ul>
+						<li>
+							<a href="#">Fotboll</a>
+							<ul>
+								<li><a href="http://www.hammarbyfotboll.se" class="bajen">Hammarby IF</a></li>
+								<li><a href="http://www.tottenhamhotspur.com" class="spurs">Tottenham</a></li>
+								<li><a href="http://www.juventus.com/en/" class="juve">Juventus</a></li>
+							</ul>						
+						</li>
+						<li>
+							<a href="#">Dryck</a>
+							<ul>
+								<li><a href="http://www.ratebeer.com" class="beer">RateBeer</a></li>
+								<li><a href="http://www.alltomol.nu" class="beer">Allt Om Öl</a></li>
+								<li><a href="http://www.ofiltrerat.se" class="beer">Ofiltrerat</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Mat</a>
+							<ul>
+								<li><a href="http://www.recept.nu/per-moberg" class="food">Per Mobergs recept</a></li>
+								<li><a href="http://www.jamieoliver.com/recipes" class="food">Jamie Olivers recept</a></li>
+								<li><a href="http://www.whiteguide.se" class="food">White Guide Sverige</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h3>Alternativ 2</h3>
+		<p>I detta alternativ har dropdownmenyerna byggts upp av en klassad <code>div</code> som i sin tur innehåller en <code>button</code> samt tre stycke hyperlänkar (<code>a</code>). I exempel 1 behövdes en JS-funktion för att få den dolda menyn att trilla ner. I detta exempel går detta att utföra direkt med CSS</p>
+		<div id="optcont">
+			<div class="maindrop">
+				<button class="inddrop">Fotboll</button>
+				<div class="dropcont">
+					<a href="http://www.hammarbyfotboll.se">Hammarby IF</a>
+					<a href="http://www.tottenhamhotspur.com">Tottenham</a>
+					<a href="http://www.juventus.com/en/">Juventus</a>
+				</div>
+			</div>
+		</div>
+		<div class="optcont">
+			<div class="maindrop">
+				<button class="inddrop">Öl</button>
+				<div class="dropcont">
+					<a href="http://www.ratebeer.com">RateBeer</a>
+					<a href="http://www.alltomol.nu">Allt Om Öl</a>
+					<a href="http://www.ofiltrerat.se">Ofiltrerat</a>
+				</div>
+			</div>
+		</div>
+		<div class="optcont">
+			<div class="maindrop">
+				<button class="inddrop">Mat</button>
+				<div class="dropcont">
+					<a href="http://www.recept.nu/per-moberg">Per Mobergs recept</a>
+					<a href="http://www.jamieoliver.com/recipes">Jamie Olivers recept</a>
+					<a href="http://www.whiteguide.se">White Guide Sverige</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>
+				Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a>
+			</p>
+		</footer>
+	</body>
+</html>

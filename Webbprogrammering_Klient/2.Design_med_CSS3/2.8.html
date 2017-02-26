@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 2.8 - Anpassning till olika enheter
+		</title>
+		<link rel="stylesheet" href="design_2.8_screen.css" media="screen" />
+		<link rel="stylesheet" href="design_2.8_mobile.css" media="(max-width:500px), (max-height:500px)" />
+		<link rel="stylesheet" href="design_2.8_print.css" media="print" />
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.8 - Anpassning till olika enheter</h1>
+			<nav>
+				<a href="index.html">Hem</a>
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>
+		<dl>
+			<dt>@page</dt>
+			<dd>Med regeln @page ges möjlighet att vid utskrift ändra sidans storlek, marginaler samt orientering, vilket görs med <code>size</code>- samt <code>margin-</code>-attribut.</dd>
+			<dt>page-break-after/before/inside</dt>
+			<dd>Med attributen <code>&lt;page-break-*></code>-attributen sätts var sidbrytning ska ske i förhållande till element. Möjliga värden är: <code>auto</code> (standard), <code>always</code>, <code>avoid</code>, <code>left</code> samt <code>right</code>. Med <code>*-before</code> respektive <code>*-after</code> styrs sidavbrotten innan respektive efter ett element. Om <code>*-inside</code> styrs sidavbrott mitt i ett element. I detta fall är <code>avoid</code> att föredra, under förutsättning att elementet får plats på en sida.</dd>
+			<dt>@page:size</dt>
+			<dd>Här anges storleken på utskriftsmaterialet (till exempel fördefinierade <code>A4</code> eller i måttenhet)</dd>
+			<dt>orphans</dt>
+			<dd>Här anges minsta antalet rader i ett stycke som måste få plats längst ner på en sida för att radbrytning ska få ske mitt i stycket</dd>
+			<dt>widows</dt>
+			<dd>Här anges hur många rader som måste komma med överst på en sida för att stycket, som påbörjades på sidan innan, ska få radbrytas mitt i stycket.</dd>
+			<dt>marks</dt>
+			<dd>Används för att lägga till markeringar utanför utskriftsområdet. Möjliga värden är <code>crop</code>, vilket markerar var en sida ska klippas, och <code>cross</code> som markerar riktning på en sida.</dd>
+		</dl>
+		<h5>Fönstrets storlek och orientering</h5>
+		<p>I <a href="2.8_window_example.html">detta exempel</a> har utförandet anpassats så att ursprungsförutsättningarna är en sida med svart bakgrund och vit text. Minskas fönstret till "stående" och under 500px bredd ändras bakgrundsfärgen till grön. Ändras storleken till "liggande" och under 650px bredd blir bakgrundsfärgen röd. Detta genom att använda regeln <code>@media</code> tillsammans med attributen <code>max-width</code> samt <code>orientation</code>.</p>
+		<h5>Olika webbläsare</h5>
+		<p>Som sista utväg går det att stilsätta olika beroende på vilken webbläsare som sidan visas i. I dessa fall används följande prefix tillsammans med stilattributen:</p>
+		<dl>
+			<dt>Firefox</dt>
+			<dd><code>-moz</code></dd>
+			<dt>Chrome, Safari samt Opera</dt>
+			<dd><code>-webkit-</code></dd>
+			<dt>Internet Explorer</dt>
+			<dd><code>-ms-</code></dd>
+		</dl>	
+		<p>I <a href="2.8_browser_example.html">detta exempel</a> är det samma textstycke som beroende på angivet browserprefix delas upp i olika många kolumner genom <code>-*-column-count</code>.</p>
+		<dl>
+			<dt>Firefox</dt>
+			<dd>2 kolumner</dd>
+			<dt>Chrome, Safari och Opera</dt>
+			<dd>3 kolumner</dd>
+			<dt>Internet Explorer</dt>
+			<dd>4 kolumner</dd>
+		</dl>
+		<footer>
+			Copyright: Tobias Gunnarsson, 2015
+		</footer>
+	</body>
+</html>

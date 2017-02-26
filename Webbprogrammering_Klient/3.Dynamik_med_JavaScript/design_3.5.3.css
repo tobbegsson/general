@@ -1,0 +1,152 @@
+footer {
+	clear: both;
+}
+
+div#menuCont {	
+	clear: right;
+	margin-top: 10px;
+}	
+
+div#menuDiv {
+	background: black;
+	float: left;
+	padding: 5px;
+	/*div med padding för att skapa ram runt inomliggande nav*/
+}
+
+nav {
+	background-color: white;
+	float: left;
+	/*Omgivande nav innehållande huvudrubriker*/
+}
+
+nav ul {
+	text-align: center;
+	/*Yttre oordnad lista med huvudrubriker*/
+}
+
+nav ul li {
+	width: 300px;
+	float: left;
+	display: inline;
+	/*Listobjekt i yttre oordnad lista - innehållande själva rubriklänkarna*/
+}
+
+nav ul li a {
+	display: block;
+	color: darkgrey;
+	text-decoration: none;
+	padding: 10px 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	/*Länktexter*/
+}
+
+nav ul li ul {
+	position: absolute;
+	width: 300px;
+	text-align: left;
+	padding-left: 0px;
+	/*Inre oordnad lista, med länkar under respektive huvudrubrik*/
+}
+
+nav ul li ul li {
+	width: 300px;
+	/*Listobjekt i inre oordnad lista - innehållande själva länkarna*/
+}
+
+nav ul li ul li a {
+	display: block;
+	text-transform: capitalize;
+	/*Länkarna i de inre oordnade listorna*/
+}
+
+nav ul li:hover a{
+	background-color: lightgrey;
+	color: black;
+	/*Vad som händer när man hovrar över de yttre listobjekten*/
+}
+
+nav ul li ul li:hover a{
+	background: lightgrey;
+	color: white;
+	/*Vad som händer när man hovrar över de inre listobjrekten*/
+}
+
+nav ul li ul li:hover .bajen{
+	background-color: green;
+	color: white;
+}
+
+nav ul li ul li:hover .spurs{
+	background-color: white;
+	color: darkblue;
+}
+
+nav ul li ul li:hover .juve{
+	background-color: black;
+	color: white;
+}
+
+nav ul li ul li:hover a.beer {
+	background-color: gold;
+	color: white;
+}
+
+nav ul li ul li:hover a.food {
+	background-color: darkred;
+	color: white;
+}
+
+nav ul li ul {
+	display: none;
+}
+
+/*OPTIONAL*/
+
+.inddrop {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 150px;
+}
+
+.maindrop {
+	float: left;
+	position: relative;
+	display: inline-block;
+}
+
+.dropcont {
+	position: absolute;
+	display: none;
+	background-color: lightgrey;
+}
+
+.dropcont a {
+	color: black;
+	padding: 10px 10px;
+	text-decoration: none;
+	display: block;
+}
+
+.maindrop:hover .dropcont {
+	display: block;
+}
+
+.dropcont a:hover {
+	background-color: darkgrey;
+}
+
+.maindrop:hover .inddrop {
+	background-color: lightgrey;
+	color: black;
+}
+
+div#optdiv {
+	position: relative;
+}
+
+

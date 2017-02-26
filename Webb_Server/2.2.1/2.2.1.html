@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>2.2.1 - Information sänd via formulär</title>
+	</head>
+	<body>
+		<fieldset>
+			<legend>GET</legend>
+			<form action="2.2.1_GET.php" method="get" id="getForm">
+				Förnamn: <br>
+				<input name="preName" type="text" /><br>
+				Efternamn: <br>
+				<input name="lastName" type="text" /><br>
+				Ålder: <br>
+				<input name="age" type="range" min="0" max="100" /><br>
+				Kön: <br>
+				Man <input name="gender" type="radio" value="Man" checked />
+				Kvinna <input name="gender" type="radio" value="Kvinna" />
+				Annat <input name="gender" type="radio" value="Annat" />
+				<br>
+				<input name="submit" type="submit" value="Skicka" />
+			</form>
+		</fieldset>
+		<br>
+		<br>
+		<fieldset>
+			<legend>POST</legend>
+			<form action="2.2.1_POST.php" method="post" id="postForm">
+				Förnamn: <br>
+				<input name="preName" type="text" /><br>
+				Efternamn: <br>
+				<input name="lastName" type="text" /><br>
+				Ålder: <br>
+				<input name="age" type="range" min="0" max="100" /><br>
+				Kön: <br>
+				Man <input name="gender" type="radio" value="Man" checked />
+				Kvinna <input name="gender" type="radio" value="Kvinna" />
+				Annat <input name="gender" type="radio" value="Annat" />
+				<br>
+				<input name="submit" type="submit" value="Skicka" />
+			</form>
+		</fieldset>
+	</body>
+</html>

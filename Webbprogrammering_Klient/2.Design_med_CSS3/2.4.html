@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 2.4 - Bilder och bakgrunder
+		</title>
+		<link rel="stylesheet" href="design.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.4 - Bilder och bakgrunder</h1>
+			<nav>
+				<a href="index.html">Hem</a>
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>		
+		<h5><code>background-attachment</code></h5>
+		<p>Egenskapen <code>background-attachment</code> ger möjlighet till att ange hur bilden ska "sitta fast" i bakgrunden när användaren scrollar i fönstret eller elementet. Standardvärdet är <code>scroll</code> vilket innebär att bilden hela tiden synspå samma position, även när fönstret scrollas. Sätts värdet till <code>fixed</code> kommer bilden följa med texten upp när den scrollas. <p>
+		<p id="attachp">
+			I rutan för detta stycke är satt till 100x100 pixlar i storlek. Bilden är 72x72 bildpunkter. I detta exempel räcker inte rutans storlek till varför användaren måste scrolla. Bilden visas på samma plats även vid scrollning eftersom jag ej har satt något värde.
+		</p>
+		<p>För att påvisa skillnaden mellan standardvärdet <code>scroll</code> och det alternativa värdet <code>fixed</code> finns två bilder inlagda som bakgrund i <code>body</code>, en i vardera övre hörn. Den väntra har värdet <code>scroll</code> vilket gör att bilden följer med när jag scrollar, medan den andra har värdet <code>fixed</code> vilket gör att den försvinner med texten upp när jag scrollar.</p>
+		<h5><code>background-color</code></h5>
+		<p>Med denna egenskap anges färg på bakgrunden. Bakgrundsfärg finns alltid men standardvärdet är <code>transparant</code> vilket innebär att bakgrunden är helt genomskinlig. För att sätta bakgrundsfärg kan något av följande vrdesvarianter användas:</p>
+		<ul>
+			<li>Fördefinierade färger, till exempel <code>red, green, blue</code> eller <code>yellow</code></li>
+			<li>Hexadecimala färgkoder, till exempel <code>#FF0000</code> för röd, eller <code>#00FF00</code> för grön</li>
+			<li>RGB-kod, till exempel <code>rgb(255,0,0)</code> för röd, eller <code>rgb(0,255,0) för grön</code></li>
+		</ul>
+		<p>Nedan exempel på en <code>h1</code>-rubrik med röd bakgrund via hexadecimal färgkod.</p>
+		<h1 id="hexh1">
+			Huvudrubrik med röd bakgrund via hexadecimal färgkod
+		</h1>
+		<h5><code>background-image</code></h5>
+		<p>Egenskapen används för ange en bild som ska användas som bakgrund i fönstret eller ett element. Värder kan antingen vara en URL, till exempel <code>url(bajenlogo.gif)</code> eller standardvärdet<code>none</code>. I exemplet nedan är en bild inlagd som bakgrund för en lista. Då <code>background-repeat</code> inte har något satt värde kommer bilden upprepas för att fylla ytan på 300x300 pixlar.</p>
+		<ul id="imgul">
+			<li>Punkt 1</li>
+			<li>Punkt 2</li>
+			<li>Punkt 3</li>
+			<li>Punkt 4</li>
+		</ul>
+		<h5><code>background-position</code></h5>
+		<p>Egenskapen anger bildens placering i den bakgrund som den placeras på. Möjliga värden är <code>left, center, right</code> vad gäller den horisentala linjen följt av <code>top, center, bottom</code> vad gäller den lodräta linjen. Det är också möjligt att använda de tidigare beskrivna enheterna som värden, till exempel antal pixlar eller milimeter. I exemplet nedan placeras först bilden <code>left top</code>, andra bilden <code>center center</code> och den tredje <code>bottom right</code> i den <code>div</code> med måtten 300x300 pixlar.</p>
+		<div id="imgposdiv"></div>			
+		<h5><code>background-repeat</code></h5>
+		<p>Egenskapen används för att ange hur bakgrundsbilden ska bete sig om den är mindre än den yta som den placeras i. Standardvärdet är <code>repeat</code> vilket innebär att bilden lkommer upprepas för att fylla bakgrundsytan på både höjd och bredd. Värdet <code>no-repeat</code> innebär att bilden inte upprepas alls, så som i exemplet under background-attachment. Det går också att upprepa endast i horisontell (<code>repeat-x</code>) eller vertikal (<code>repeat-y</code>) linje. De två sistnämnda exemplifieras nedan.</p>
+		<p id="repeatxp">HORISONTELLT</p>
+		<p id="repeatyp">VERTIKALT</p>
+		<h5>Flödande text</h5>
+		<p>Handlar i detta sammanhang om att få en bild att anpassa sin placering till ett annat närliggande element, till exempel en text. Detta åstadkommer man genom egenskapen <code>float</code>. I exemplet nedan finns en ruta i form av ett stycke med storleken 300x300 pixlar. En bild är placerad i stycket med <code>float: left</code> följt av text som förhåller sig till bilden.
+		<p id="floatimgp1">
+			<img id="floatimg1" src="bajenlogo.gif" alt="Hammarby logo" />Detta är Hammarby IFs klubbmärke. Föreningen grundades 1897 som en roddklubb under namnet......
+		</p>
+		<p>Det går att kräva att en rubrik och dess efterföljande text flyttas nedanför bilden genom egenskapen <code>clear</code> med möjliga värden <code>left, right, both</code> eller standardvärdet <code>none</code>. I exemplet nedan finns en underrubrik inlagd vilken gör att radbrytningar sker tills rubriken finns under bilden, eftersom rubriken har tilldelats tillhöra klassen <code>clearedboth</code> vilken jag i css-dokumentet gett egenskap och värde <code>clear: both</code>.</p>
+		<article id="floatimgarticle2">
+			<img id="floatimg2" src="bajenlogo.gif" alt="Hammarby logo"/>
+					Detta är Hammarby IFs klubbmärke, grönt och vitt och fint. <h5 class="clearedboth">Grundande</h5>Föreningen grundades 1897 som en roddklubb under namnet......
+		</article>
+		<footer>
+			Copyright: Tobias Gunnarsson, 2015
+		</footer>
+	</body>
+</html>

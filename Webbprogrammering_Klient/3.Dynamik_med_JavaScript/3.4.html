@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js_3.4.js"></script>
+		<title>
+			Uppgift 3.4 - Webbläsarobjekt
+		</title>
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 3.4 - Webbläsarobjekt</h1>
+		</header>
+		<h2>Window</h2>
+		<h3>Egenskaper</h3>
+		<h5>defaultStatus och status</h5>
+		<p>Webbläarens standardstatus är ändrad till "Standardstatus" genom <code>window.defaultStatus</code>. Klicka på knappen så ändras statusen, detta genom <code>window.status</code>.</p>
+		<button id="statusBtn">Klicka</button>
+		<h5>screenLeft, screenTop, screenX och screenY</h5>
+		<p>Koordinater för hur webbläsaren är horisontellt positionerad i förhållande till skärmen genom</p>
+		<ul>
+			<li><code>screenLeft</code>: <span id="scrL"></span></li>
+			<li><code>screenX</code>: <span id="scrX"></span></li>
+		</ul>
+		<p>Koordinater för hur webbläsaren är verikalt positionerad i förhållande till skärmen genom</p>
+		<ul>
+			<li><code>screenTop</code>: <span id="scrT"></span></li>
+			<li><code>screenY</code>: <span id="scrY"></span></li>
+		</ul>
+		<p>Klicka på knappen nedan för att visa koordinaterna: </p>
+		<button id="scrBtn">Klicka</button>
+		<h5>innerHeight, innerWidth, outerHeight och outerWidth</h5>
+		<p>Klicka på knappen för att visa fönstrets yttre höjd och bredd - inklusive verktygsfält</p>
+		<button id="outHWBtn">Klicka</button>
+		<ul>
+			<li><code>outerHeight</code>: <span id="outH"></span></li>
+			<li><code>outeWidth</code>: <span id="outW"></span></li>
+		</ul>
+		<p>Klicka på knappen för att visa fönstrets inre höjd och bredd - exklusive verktygsfält</p>
+		<button id="innHWBtn">Klicka</button>
+		<ul>
+			<li><code>innerHeight</code>: <span id="innH"></span></li>
+			<li><code>innerWidth</code>: <span id="innW"></span></li>
+		</ul>
+		<h5>pageXOffset och pageYOffset</h5>
+		<p>Klicka på knappen till höger för att visa koordinaterna du har scrollat till för tillfället.</p>
+		<button id="xYOffsBtn">Visa koordinater</button>
+		<p>Antal pixlar som scrollats på bredden: <span id="xOffs"></span></p><br>
+		<p>Antal pixlar som scrollats på höjden: <span id="yOffs"></span></p>
+		<h3>Metoder</h3>
+		<h5>alert, conform, prompt</h5>
+		<p>Klicka på knapparna nedan och se vad som händer</p>
+		<button id="alertBtn">Alert</button><br>
+		<button id="confBtn">Confirm</button><br>
+		<span id="confSpan"></span>
+		<button id="promptBtn">Prompt</button>
+		<br>
+		<span id="promptSpan"></span>
+		<h5>open, close, focus, blur</h5>
+		<p>Klicka på knapparna för att öppna och stänga en intressant sida, samt för att tilldela eller ta bort focus från fönstret</p>
+		<button id="openBtn">Öppna</button>
+		<button id="closeBtn">Stäng</button><br>
+		<button id="focusBtn">Focus</button>
+		<button id="blurBtn">Blur</button>
+		<p>Metoden<code>focus</code> är default när ett nytt fönster öppnas, motsatsen <code>blur</code> kan exempelvis användas om man vill att fönstret ska öppnas i bakgrunden</p>
+		<h5>set-/clear -Interval/-Timeout</h5>
+		<p>Detta är en klocka som uppdateras varje sekund med hjälp av metoden <code>setInterval</code>: <span id="setIntSpan"></span></p>
+		<p>...Och med denna knappen kan klockan stannas, genom metoden <code>clearInterval</code></p>
+		<button id="clearIntBtn">Stoppa klockan!</button>
+		<p>Här återanvänds metoden <code>alert()</code> tillsammans med <code>setTimeout</code> vilken är satt till 5000 milisekunder (5 sekunder) från att du tryckt på knappen. Innan dessa 5 sekunder har passerat kan du trycka på stoppknappen för att avbryta att alert-fönstret kommer upp</p>
+		<button id="setTOBtn">Starta</button>
+		<button id="clearTOBtn">Stoppa</button>
+		<h5>moveBy, moveTo</h5>
+		<p>Klicka upp fönstret och styr det sedan åt det håll som önskas. Förflyttningen sker genom metoden <code>moveBy()</code>. Flytten till fast position sker genom <code>moveTo()</code></p>
+		<button id="openMvBtn">Öppna fönster</button><br>
+		<button id="upBtn">Up</button><br>
+		<button id="leftBtn">Left</button>
+		<button id="rightBtn">Right</button><br>
+		<button id="downBtn">Down</button><br>
+		<button id="5x5Btn">500*500px</button>
+		<h5>resizeBy, resizeTo</h5>
+		<p>Öppna fönstret med hjälp av knappen. Du kan sedan välja att förminska fönstret med 10x10 pixlar eller förstora det med 15x15. Dessutom kan du tilldela den fasta storleken 250x250</p>
+		<button id="openRezBtn">Öpnna fönster</button>
+		<button id="rezPlusBtn">Förstora</button>
+		<button id="rezMinBtn">Förminska</button>
+		<button id="rezToBtn">250*250</button>
+		<h5>scroll, scrollBy, scrollTo</h5>
+		<p>OBS! Metoden <code>scroll</code> har numera ersatts av <code>scrollTo</code>. Denna metod exemplifieras i knappen '100 pixlar från toppen'. Knapparna 'Uppåt' och 'Nedåt' är exempel på <code>scrollBy</code> där varje knapptryck genererar 5 pixlars scrollning</p>
+		<button id="scrUpBtn">Uppåt</button><br>
+		<button id="scrDownBtn">Nedåt</button><br>
+		<button id="scrFixBtn">100 pixlar från toppen</button>
+		<h5>print</h5>
+		<p>Klicka på knappen för att skriva ut denna sida</p>
+		<button id="printBtn">Skriv ut sidan</button>
+		<h2>Navigator</h2>
+		<h3>Egenskaper</h3>
+		<h5>appCodeName, appName, appVersion, platform, userAgent</h5>
+		<p>Detta är din webbläsares kodnamn: <span id="aCNSpan"></span></p>
+		<p>Detta är dess namn: <span id="aNSpan"></span></p>
+		<p>Detta är den använda versionen av webbläsaren: <span id="aVSpan"></span></p>
+		<p>Här visas den aktuella plattformen: <span id="platSpan"></span></p>
+		<p>Och här visas user agent header: <span id="uASpan"></span></p>
+		<h5>cookieEnabled</h5>
+		<p>Tillåts cookies i din webbläsare? Kontrollera genom att klicka på knappen</p>
+		<button id="cookEnBtn">Cookies?</button>
+		<p>Din webbläsare tillåter cookies?: <span id="cookEnSpan"></span></p>
+		<h2>Screen</h2>
+		<h3>Egenskaper</h3>
+		<h5>width, height, availWidth, availHeight</h5>
+		<p>Fönstrets storlek i antal pixlar</p>
+		<p>Fönstrets totala höjd (height): <span id="hSpan"></span></p>
+		<p>Total bredd (width): <span id="wSpan"></span></p>
+		<p>Höjd exklusive verktygsfält (availHeight): <span id="aHSpan"></span></p>
+		<p>Bredd exkl. verktygsfält (availWidth): <span id="aWSpan"></span></p>
+		<h2>Location</h2>
+		<p>Objektet <code>Location</code> innehåller information om den aktuella URL:en</p>
+		<h3>Egenskaper</h3>
+		<h5>host, hostname, port</h5>
+		<p>Enkelt förklarat är egenskapen <code>host</code> en sammanslagning av <code>hostname</code> och <code>port</code>.</p>
+		<p>URL:ens hostname är: <span id="hNSpan"></span></p>
+		<p>Dess portnummer är: <span id="portSpan"></span></p>
+		<p>OBS! Om porten är standardport 80 visar vissa webbläsare 0 eller till och med ingenting</p>
+		<h5>href, protocoll, pathname, hash, search</h5>
+		<p>Sidans fullständiga URL: <span id="hrefSpan"></span></p>
+		<p>Dess protokoll: <span id="protSpan"></span></p>
+		<p>Dess sökväg: <span id="pathSpan"></span></p>
+		<p>Eventuell ankardel i URL: <span id="hashSpan"></span></p>
+		<p>Eventuell sökdel: <span id="searchSpan"></span></p>
+		<h3>Metoder</h3>
+		<h5>assign, reload, replace</h5>
+		<p>med <code>assign</code> laddas en ny sida upp. Med <code>reload</code> laddas befintlig sida om. Med <code>replace</code> laddas också en ny sida upp men med skillnaden att det inte kommer gå att backa tillbaka till ursprungssidan, just eftersom det har bytts ut.</p>
+		<button id="relBtn">Reload</button>
+		<button id="assBtn">Assign</button>
+		<button id="replBtn">Replace (SKA DU VERKLIGEN?)</button>
+		<footer>
+			<p>
+				Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a>
+			</p>
+		</footer>
+	</body>
+</html>

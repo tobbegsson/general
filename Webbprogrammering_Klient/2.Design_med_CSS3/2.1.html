@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			Uppgift 2.1 - Grunderna i CSS3
+		</title>
+		<link rel="stylesheet" href="design.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 2.1 - Grunderna i CSS3</h1>
+			<nav>
+				<a href="index.html">Hem</a><br />
+				<a href="2.1.html">2.1 - Grunderna i CSS3</a>
+				<a href="2.2.html">2.2 - Text och Listor</a>
+				<a href="2.3.html">2.3 - Marginaler, kantlinjer och paddning</a>
+				<a href="2.4.html">2.4 - Bilder och bakgrunder</a>
+				<a href="2.5.html">2.5 - Navigering</a>
+				<a href="2.6.html">2.6 - Tabeller och formulär</a>
+				<a href="2.7.html">2.7 - Sidlayout</a>
+				<a href="2.8.html">2.8 - Anpassning till olika enheter</a>
+			</nav>
+		</header>
+			<h3>Externt länkad CSS-fil och dess fördelar</h3>
+			<p>Den stora fördelen med att använda externt länkad CSS-fil är att HTML-koden blir helt frikopplad från hur webbsidan ser ut. Dessutom förenklar detta tillvägagångssätt att få en enhetlig presentation av flera sidor, då samtliga kan vara sammankopplad med ett och samma CSS-dokument och därmed erhålla samma stilpresentation.</p>
+			<h3>Arv</h3>
+			<p>Med arv inom CSS menas att element ärver CSS-regler från det omgärdande elementet, om inte annat anges. Exempel: Om alla stycken (<code>p</code>) har givits CSS-regel som anger blå textfärg, kommer även en rubrik av exempeltyp <code>h3</code> bli blå om den placeras i en paragraf - om inte rubriktypen har tilldelats en annan CSS-regel. Det finns element som är undantagna arvsregeln.</p>
+			<h3>Cascade</h3>
+			<p>Inom CSS finns en hierarki mellan stilmallar. Webbläsaren väljer ut den deklaration som kommer först. Hierarkin ser ut enligt nedan:</p>
+				<ol>
+					<li>Egenskaper angivna med attributet <code>style</code> oberoende var i dokumentet de är angivna, har första prioritet. Till exempel om en stil lagts in på ett specifikt ord eller stycke.</li> 
+					<li>Egenskaper angivna med taggen <code>style</code> i sidhuvudet. Dessutom har mallar för ett element med ett angivet <code>id</code> företräde gentemot generellt angivna taggar.</li>
+					<li>Egenskaper som angivits i ett malldokument (till exempel en CSS-fil) genom taggen <code>link</code> i dokumentets sidhuvud.</li>
+					<li>Egenskaper som angivits i ett malldokument via <code>link</code> i HTTP-huvudet. Om flera malldokument finns angivna här gäller regeln "först är först".</li>
+					<li>Användarens default-stilmall, om webbläsaren möjliggör för användaren att välja detta.</li>
+					<li>Webbläsarens inbyggda formatmall.</li>
+				</ol>
+			<h3>Selektorer</h3>
+			<dl>
+				<dt>Tagg</dt>
+				<dd>Avser att typen av tagg anges i CSS-dokumentet, för vilken angivna regler ska gälla. Anges med elementtyp, exempelvis <code>p</code> eller <code>h3</code></dd>
+				<dt>Attribut</dt>
+				<dd>Avser att samtliga element som har angivet attribut ska tilldelas angivna regler</dd>
+				<dt>Klass</dt>
+				<dd>Genom att tilldela ett element en klass och ett klassnamn kan denna klass tilldelas regler genom att som selektor ange <code>.klassnamn</code>. Flera element kan vara av samma klass</dd>				
+				<dt>ID</dt>
+				<dd>Som 'klass' fast med skillnaden att endast ett element kan tilldelas ett specifikt ID.</dd>				
+				<dt>Barn-selektorer</dt>
+				<dd>Kan exempelvis användas om man vill ange specifika regler för ett stycke som finns i ett stycke som finns i ett stycke (andra nivåns barn).</dd>				
+			</dl>	
+			<h3>Enheter</h3>
+			<p>Absoluta enheter rekommenderas inte med anledning av den stora variation av skärmstorlekar som finns idag.</p>
+			<h4>Absoluta</h4>
+			<dl>
+				<dt><code>in</code></dt>
+				<dd>Storlek anges i måttet 'inches' där 1in motsvarar 2.54 cm</dd>
+				<dt><code>cm</code></dt>
+				<dd>Anges <code>font-size</code> till <code>2cm</code> så blir texten 2 centimeter, oavsett storlek på skärm som sidan läses in på.</dd>
+				<dt><code>mm</code></dt>
+				<dd>Samma som <code>cm</code> fast avser istället milimeter</dd>
+				<dt><code>pt</code></dt>
+				<dd>Storlek anges i form av måttet 'points', där 1pt motsvarat 1/72 av 1 in</dd>
+				<dt><code>pc</code></dt>
+				<dd>1 'picas' motsvarar 12pt</dd>
+			</dl>	
+			<h4>Relativa</h4>
+			<dl>	
+				<dt><code>em</code></dt>
+				<dd>Storlek anges i förhållande till den angivna textstorleken på det berörda elementet. <code>2em</code> innebär exempelvis två gånger nuvarande textstorleks storlek</dd>
+				<dt><code>ex</code></dt>
+				<dd>Samma som <code>em</code> fast i förhållande till textstorlekens x-höjd</dd>
+				<dt><code>px</code></dt>
+				<dd>Storlek i antal pixlar som finns på den skärm där sidan visas</dd>
+				<dt><code>%</code></dt>
+				<dd>Kan exempelvis användas till att sätta storlek i förhållande till sidans totala storlek. Önskas sidomarginaler på 15% respektive 10% så kommer elementet uppta 75% av sidans bredd.</dd>
+			</dl>
+			<h3>Ett CSS-dokuments uppbyggnad</h3>
+			<p>Selektor anges följt av en kropp markerad med 'måsvingar' ( <code>{}</code> ). I kroppen anges sedan de regler som ska gälla för elementet. Varje regel avslutas med <code>;</code></p>
+		<footer>
+			<p>Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a></p>
+		</footer>
+	</body>
+</html>

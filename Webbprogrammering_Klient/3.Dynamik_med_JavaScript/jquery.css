@@ -1,0 +1,137 @@
+div#div1 {
+	background-color: green;
+	width: 75px;
+	height: 75px;
+	border: 5px solid black;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+}
+
+div#div2 {
+	background-color: red;
+	width: 75px;
+	height: 75px;
+	border: 5px solid black;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+	text-align: center;
+	color: green;
+}
+
+div#div3_1 {
+	background-color: darkblue;
+	width: 75px;
+	height: 75px;
+	border: 5px solid lightblue;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+	text-align: center;
+	color: lightblue;
+}
+
+div#div3_2 {
+	background-color: white;
+	width: 75px;
+	height: 75px;
+	border: 5px solid green;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+	text-align: center;
+	color: green;
+}
+
+div#div3_3 {
+	background-color: black;
+	width: 75px;
+	height: 75px;
+	border: 5px solid yellow;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+	text-align: center;
+	color: yellow;
+}
+
+div#div4 {
+	background-color: red;
+	width: 75px;
+	height: 75px;
+	border: 5px solid black;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+}
+
+div#div5 {
+	background-color: red;
+	width: 75px;
+	height: 75px;
+	border: 5px solid black;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+}
+
+div#div6 {
+	background-color: white;
+	width: 75px;
+	height: 75px;
+	border: 5px solid green;
+	padding: 5px;
+	margin-top: 100px;
+	margin-left: 100px;
+	border-radius: 75px;
+	color: green;
+	text-align: center;
+}
+
+div#div7 {
+	background-color: red;
+	width: 75px;
+	height: 75px;
+	border: 5px solid black;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+}
+
+span#div7span {
+	position: center;
+	color: white;
+	width: 75px;
+	height: 75px;
+	margin: 50%;
+	text-align: center;
+}
+
+div#div8 {
+	background-color: red;
+	width: 75px;
+	height: 75px;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+}
+
+div.div8Brdr {
+	border: 10px solid green;
+}
+
+frame#prevDefFrm {
+	width: 50%;
+	height: 100px;
+	border: 1px solid black;
+}
+div#div9{
+	background-color: red;
+	width: 75px;
+	height: 75px;
+	border: 5px solid black;
+	padding: 5px;
+	margin: 10px;
+	border-radius: 75px;
+}

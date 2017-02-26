@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="design_3.5.1.css" rel="stylesheet" />
+		<script src="js_3.5.1.js"></script>
+		<title>
+			Uppgift 3.5.1 - Effekter och animationer
+		</title>
+	</head>
+	<body>
+		<header>
+			<h1>Uppgift 3.5.1 - Effekter och animationer</h1>
+		</header>
+		<h5>hide()</h5>
+		<p id="hideP">Testa klicka <span id="hideSpan">HÄR</span> för att ta bort hela stycket</p>
+		<h5>show()</h5>
+		<p id="showP">Klicka knapparna nedan för att visa eller dölja detta stycke</p>
+		<button id="showBtn">Visa</button>
+		<button id="hideBtn">Dölj</button>
+		<h5>fadeIn() och fadeOut()</h5>
+		<p>Klicka på knapparna nedan för att få cirkeln att tona ut respektive tona in. Cirkeln är satt att tona in fort med tona ut långsamt</p>
+		<div id="fadeDiv"></div>
+		<button id="fadeInBtn">Visa</button>
+		<button id="fadeOutBtn">Dölj</button>
+		<h5>fadeToggle()</h5>
+		<p>Metoden <code>fadeToggle()</code> kan beskrivas som en smart sammanslagning av de två tidigare metoderna. Är objektet dolt så sker en fadeIn(), är objektet synligt så sker en fadeOut(). Därför behövs bara en knapp i exemplet nedan</p>
+		<div id="fadeTogDiv"></div>
+		<button id="fadeTogBtn">Visa/Dölj</button>
+		<h5>fadeTo()</h5>
+		<p>Med denna metod sätts ett värde mellan 0 och 1 som talar om till vilken opacitet objektet ska tonas. Standardvärdet för uttoning är 0 vilket gör att objektet helt försvinner, med standardvärdet vid intoning är 1 vilket gör att objektet visas helt utan någon opacitet. I exemplet nedan tonas objektet ut till 0.25 och in till 0.75</p>
+		<div id="fadeToDiv"></div>
+		<button id="fadeToInBtn">Visa</button>
+		<button id="fadeToOutBtn">Dölj</button>
+		<h5>animate()</h5>
+		<p>Med metoden <code>animate()</code> går det att manipulera ett objekts css-egenskaper för att få igenom förändringar av det. Exemplet nedan ären cirkel med fyra animationer efter varandra som utför förändringarna. Detta följs av en callback där funktionen som innehåller animationen körs igen. Varannan animation körs med easing <code>swing</code> och varannan med <code>linear</code>.</p>
+		<button id="animStartBtn">Starta</button>
+		<button id="animStopBtn">Stoppa</button><br>
+		<div id="animDiv"></div>		
+		<footer>
+			<p>
+				Copyright: Tobias Gunnarsson, 2015 <a href="mailto:togu6504@student.su.se">Kontakta mig</a>
+			</p>
+		</footer>
+	</body>
+</html>
